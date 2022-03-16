@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mavericks-db/portfolio/issues"
   },
-  "homepage": "https://github.com/mavericks-db/portfolio#readme"
+  "homepage": "https://github.com/mavericks-db/portfolio#readme",
+  "dependencies": {
+    "lighthouse": "^9.5.0"
+  }
 }
