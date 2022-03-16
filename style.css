@@ -31,8 +31,27 @@ body {
   align-items: center;
 }
 
-.menu {
+.logoPlaceholder {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
   margin: 10px 12px;
+  text-decoration: none;
+  color: #172b4d;
+}
+
+.logoPlaceholder:hover {
+  cursor: pointer;
+  color: #36b37e;
+}
+
+nav {
+  margin: 10px 12px;
+  cursor: pointer;
+}
+
+.headlineSection {
+  margin-top: 50px;
 }
 
 .headerText {
@@ -42,21 +61,25 @@ body {
   margin: 10px 12px;
 }
 
-.headlineTextGroup {
+.headerTextGroup {
+  margin-bottom: 58px;
+}
+
+h1,
+h2 {
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
   text-align: center;
   color: #172b4d;
-  margin: 58px 0;
   order: 0;
 }
 
-.headlineText2 {
+h2 {
   color: #36b37e;
 }
 
-.supportText {
+p {
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
@@ -64,12 +87,17 @@ body {
   color: #172b4d;
   overflow-y: scroll;
   order: 1;
+  padding: 25px;
 }
 
-.iconBar {
+ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 170px;
   margin: 58px auto;
+}
+
+li {
+  list-style-type: none;
 }
