@@ -101,3 +101,7 @@ ul {
 li {
   list-style-type: none;
 }
+
+.social:hover path {
+  fill: #36b37e;
+}
