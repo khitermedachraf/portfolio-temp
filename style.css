@@ -8,6 +8,16 @@
   padding: 0;
 }
 
+:root {
+  --color-darkgreen: #36b37e;
+  --color-lightgreen: #c5e9da;
+  --color-neutral: #ebf0ee;
+  --color-darkblue: #172b4d;
+  --color-white: #fff;
+  --color-neutral-border: #d0d9d4;
+  --color-grey-text: #3a4a42;
+}
+
 body {
   background-color: white;
 }
@@ -34,12 +44,12 @@ body {
   line-height: 28px;
   padding: 10px 12px;
   text-decoration: none;
-  color: #172b4d;
+  color: var(--color-darkblue);
 }
 
 .logoPlaceholder:hover {
   cursor: pointer;
-  color: #36b37e;
+  color: var(--color-darkgreen);
 }
 
 nav {
@@ -48,7 +58,7 @@ nav {
 }
 
 .svg:hover path {
-  fill: #36b37e;
+  fill: var(--color-darkgreen);
   cursor: pointer;
 }
 
@@ -59,11 +69,11 @@ nav {
   font-size: 40px;
   line-height: 52px;
   text-align: center;
-  color: #172b4d;
+  color: var(--color-darkblue);
 }
 
 .content h3 {
-  color: #36b37e;
+  color: var(--color-darkgreen);
 }
 
 p {
@@ -71,7 +81,7 @@ p {
   font-size: 20px;
   line-height: 28px;
   text-align: center;
-  color: #172b4d;
+  color: var(--color-darkblue);
   padding: 25px;
 }
 
@@ -104,6 +114,7 @@ p {
   padding-left: 30px;
   padding-right: 30px;
   text-align: center;
+  color: var(--color-darkblue);
 }
 
 .works img {
@@ -123,9 +134,9 @@ p {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #ebf0ee;
+  background-color: var(--color-neutral);
   width: fit-content;
-  border: 1px solid #d0d9d4;
+  border: 1px solid var(--color-neutral-border);
   border-radius: 8px;
   padding-top: 252px;
   margin: 0 auto;
@@ -134,7 +145,7 @@ p {
 .description-container {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--color-white);
   border-radius: 8px;
 }
 
@@ -142,7 +153,7 @@ p {
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
-  color: #172b4d;
+  color: var(--color-darkblue);
   margin: 16px 16px;
 }
 
@@ -156,24 +167,24 @@ p {
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
-  background-color: #ebf0ee;
+  background-color: var(--color-neutral);
   border-radius: 4px;
   padding: 8px 12px;
   margin: 0 8px;
   text-align: center;
-  color: #3a4a42;
+  color: var(--color-grey-text);
   white-space: nowrap;
 }
 
 button {
-  background-color: #36b37f;
+  background-color: var(--color-darkgreen);
   border-radius: 4px;
   border: hidden;
   font-weight: 500;
   font-size: 17px;
   line-height: 24px;
   letter-spacing: 0.03em;
-  color: #fff;
+  color: var(--color-white);
   padding: 12px;
   margin: 24px auto;
 }
@@ -200,7 +211,7 @@ button:active {
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
-  color: #172b4d;
+  color: var(--color-darkblue);
   margin-bottom: 24px;
 }
 
@@ -228,9 +239,9 @@ button:active {
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #ebf0ee;
+  background-color: var(--color-neutral);
   width: auto;
-  border: 1px solid #d0d9d4;
+  border: 1px solid var(--color-neutral-border);
   border-radius: 8px;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -263,21 +274,21 @@ button:active {
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.03em;
-  color: #36b37e;
+  color: var(--color-darkgreen);
   padding: 12px;
   border-radius: 8px;
-  background-color: white;
+  background-color: var(--color-white);
   text-align: center;
   margin: 0 2px;
 }
 
 .description-container li:hover {
-  color: #36b37e;
+  color: var(--color-darkgreen);
   cursor: pointer;
 }
 
 .cards li:hover {
-  color: #36b37e;
+  color: var(--color-darkgreen);
   cursor: pointer;
 }
 
