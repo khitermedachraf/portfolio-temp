@@ -89,15 +89,21 @@ p {
 
 /* Works Section */
 .works {
-  display: grid;
-  grid-auto-columns: auto;
-  grid-auto-rows: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 10px 10px;
 }
 
 .works h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
   margin-bottom: 30px;
-  padding: 0 30px;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
 }
 
 .works img {
@@ -107,7 +113,7 @@ p {
 
 .grid-container {
   display: grid;
-  place-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 24px;
 }
 
@@ -208,55 +214,50 @@ button:active {
 
 /* Cards Section */
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   margin: 10px auto;
 }
 
-.cards ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+.cards-grid-container ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
 }
 
-.cards li {
-  margin: 10px 20px;
+.cards-grid-container li {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  text-align: center;
   background-color: #ebf0ee;
-  border-radius: 8px;
-  border: 1px solid #c1c7d0;
-  padding: 50px 20px;
   width: fit-content;
+  border: 1px solid #d0d9d4;
+  border-radius: 8px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin: 0 25px;
 }
 
-.cards h5 {
+.cards-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards-description h5 {
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
   color: #344563;
   padding: 12px;
-  text-align: center;
-}
-
-.cards img {
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
 }
 
 .cards-description ul {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
+  justify-content: center;
 }
 
 .cards-description li {
+  list-style-type: none;
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
@@ -265,7 +266,8 @@ button:active {
   padding: 12px;
   border-radius: 8px;
   background-color: white;
-  margin: 0 10px;
+  text-align: center;
+  margin: 0 2px;
 }
 
 .description-container li:hover {
