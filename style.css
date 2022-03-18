@@ -229,7 +229,7 @@ button:active {
   flex-direction: column;
   text-align: center;
   background-color: #ebf0ee;
-  width: fit-content;
+  width: auto;
   border: 1px solid #d0d9d4;
   border-radius: 8px;
   padding-top: 40px;
