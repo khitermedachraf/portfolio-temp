@@ -128,7 +128,7 @@ p {
   border: 1px solid #d0d9d4;
   border-radius: 8px;
   padding-top: 252px;
-  margin: 0 25px;
+  margin: 0 auto;
 }
 
 .description-container {
@@ -142,7 +142,7 @@ p {
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
-  color: #3a4a42;
+  color: #172b4d;
   margin: 16px 16px;
 }
 
@@ -162,6 +162,7 @@ p {
   margin: 0 8px;
   text-align: center;
   color: #3a4a42;
+  white-space: nowrap;
 }
 
 button {
@@ -220,7 +221,7 @@ button:active {
 .cards-grid-container ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 24px;
+  gap: 8px;
 }
 
 .cards-grid-container li {
