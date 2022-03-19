@@ -23,7 +23,7 @@ body {
 }
 
 .backgroundContainer {
-  background-image: url(./svg/header-m.svg);
+  background-image: url(./assets/header-m.svg);
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
@@ -200,7 +200,7 @@ button:active {
 
 /* About Me Section */
 .aboutMe {
-  background-image: url(./svg/aboutme-m.svg), url(./svg/aboutme2-m.svg);
+  background-image: url(./assets/aboutme-m.svg), url(./assets/aboutme2-m.svg);
   background-position: right top, left bottom;
   background-repeat: no-repeat, no-repeat;
   text-align: center;
