@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -284,15 +286,12 @@ button:active {
 
 .description-container li:hover {
   color: var(--color-darkgreen);
-  cursor: pointer;
 }
 
 .cards li:hover {
   color: var(--color-darkgreen);
-  cursor: pointer;
 }
 
 .cards-description li:hover {
   color: #3a4a42;
-  cursor: pointer;
 }
