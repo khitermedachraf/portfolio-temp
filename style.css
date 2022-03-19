@@ -151,7 +151,7 @@ p {
   border-radius: 8px;
 }
 
-.description-container h4 {
+.description-container h3 {
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
@@ -256,7 +256,7 @@ button:active {
   align-items: center;
 }
 
-.cards-description h5 {
+.cards-description h2 {
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
