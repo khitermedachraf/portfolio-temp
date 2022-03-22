@@ -27,7 +27,7 @@ body {
 .backgroundContainer {
   background-image: url(./assets/header-m.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -38,6 +38,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header-desktop {
+  display: none;
 }
 
 .logoPlaceholder {
@@ -65,6 +69,10 @@ nav {
 }
 
 /* ---------------Content Section--------------- */
+.content {
+  margin-top: 5rem;
+}
+
 .content h2,
 .content h3 {
   font-weight: 700;
@@ -91,7 +99,6 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3.625rem 0;
 }
 
 .content li {
@@ -137,7 +144,7 @@ p {
   align-items: center;
   text-align: center;
   background-color: var(--color-neutral);
-  width: fit-content;
+  width: auto;
   border: 1px solid var(--color-neutral-border);
   border-radius: 8px;
   padding-top: 15.75rem;
@@ -228,13 +235,15 @@ button:active {
 
 /* ---------------Cards Section--------------- */
 .cards {
+  display: block;
   margin: 0.625rem auto;
 }
 
 .cards-grid-container ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 0.5rem;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .cards-grid-container li {
@@ -287,7 +296,7 @@ button:active {
 
 /* ---------------Contact Form Section--------------- */
 .contact-form {
-  background-image: url(./assets/contact-form.svg);
+  background-image: url(./assets/contact-form-m.svg);
   background-position: bottom right;
   background-repeat: no-repeat;
 }
@@ -320,6 +329,10 @@ button:active {
   margin-right: 1.5rem;
   margin-bottom: 1.5rem;
   padding: 0.9375rem 1rem;
+}
+
+.contact-form form .name-desktop {
+  display: none;
 }
 
 .contact-form form textarea {
@@ -395,4 +408,132 @@ button:active {
 
 .iconLinks li:hover {
   color: var(--color-darkgreen);
+}
+
+/* ---------------Media Query Section--------------- */
+@media (min-width: 768px) {
+  .backgroundContainer {
+    background-image: url(./assets/header-d.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    padding-bottom: 20rem;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .header-desktop {
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+    color: var(--color-darkblue);
+  }
+  
+  .header-desktop a,
+  .header-desktop a:visited {
+    color: var(--color-darkblue);
+    text-decoration: none;
+  }
+
+  .content {
+    padding-left: 12rem;
+    padding-right: 12rem;
+    margin-top: 10rem;
+  }
+
+  .content h2,
+  .content h3 {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 60px;
+  text-align: center;
+  letter-spacing: 0.37px;
+  color: var(--color-darkblue);
+  }
+
+  .content h3 {
+    color: var(--color-darkgreen);
+  }
+
+  .works img {
+    display: none;
+  }
+
+  .aboutMe {
+    background-image: url(./assets/aboutme-d.svg), url(./assets/aboutme2-d.svg);
+    background-position: right top, left bottom;
+    background-repeat: no-repeat, no-repeat;
+    text-align: center;
+    margin: 2rem auto;
+    padding: 10rem 12rem;
+    height: 100vh;
+  }
+
+  .contact-form {
+    background-image: url(./assets/contact-form1-d.svg), url(./assets/contact-form2-d.svg), url(./assets/contact-form3-d.svg);
+    background-position: bottom left, 20% 100%, bottom right;
+    background-repeat: no-repeat;
+    background-size: 10%;
+
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: flex-start;
+    padding-bottom: 5rem;
+  }
+  
+  .contact-form h2 {
+    width: 40%;
+    margin-right: 2rem;
+    margin-top: 3rem;
+    font-size: 32px;
+    height: 300px;
+    align-self: center;
+
+  }
+  
+  .contact-form form {
+    width: 60%;
+    margin-top: 5rem;
+    margin-right: 4rem;
+    height: 400px;
+    position: relative;
+  }
+
+  .contact-form form input.mobile {
+    display: none;
+  }
+
+  .contact-form form .name-desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-form form .name-desktop input.desktop1 {
+    margin-right: 0.5rem;
+  }
+
+  .contact-form form .name-desktop input.desktop2 {
+    margin-left: 0.5rem;
+  }
+
+
+  .contact-form form button {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .contact-form .iconLinks ul {
+    display: block;
+    height: 10rem;
+  }
+
+  .supportingText {
+    display: none;
+  }
 }
