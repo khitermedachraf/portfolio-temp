@@ -33,7 +33,7 @@ body {
   justify-content: space-between;
 }
 
-/* Header Section */
+/* ---------------Header Section--------------- */
 .header {
   display: flex;
   justify-content: space-between;
@@ -64,7 +64,7 @@ nav {
   cursor: pointer;
 }
 
-/* Content Section */
+/* ---------------Content Section--------------- */
 .content h2,
 .content h3 {
   font-weight: 700;
@@ -99,7 +99,7 @@ p {
   padding: 0 0.625rem;
 }
 
-/* Works Section */
+/* ---------------Works Section--------------- */
 .works {
   display: flex;
   flex-direction: column;
@@ -200,7 +200,7 @@ button:active {
   background-color: #008552;
 }
 
-/* About Me Section */
+/* ---------------About Me Section--------------- */
 .aboutMe {
   background-image: url(./assets/aboutme-m.svg), url(./assets/aboutme2-m.svg);
   background-position: right top, left bottom;
@@ -226,7 +226,7 @@ button:active {
   padding: 0 2.25rem;
 }
 
-/* Cards Section */
+/* ---------------Cards Section--------------- */
 .cards {
   margin: 0.625rem auto;
 }
@@ -285,18 +285,7 @@ button:active {
   margin: 0 2px;
 }
 
-.description-container li:hover {
-  color: var(--color-darkgreen);
-}
-
-.cards li:hover {
-  color: var(--color-darkgreen);
-}
-
-.cards-description li:hover {
-  color: #3a4a42;
-}
-
+/* ---------------Contact Form Section--------------- */
 .contact-form {
   background-image: url(./assets/contact-form.svg);
   background-position: bottom right;
@@ -313,13 +302,13 @@ button:active {
 }
 
 .contact-form form {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
   display: flex;
   flex-direction: column;
 }
 
 .contact-form form input {
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
@@ -330,12 +319,10 @@ button:active {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   margin-bottom: 1.5rem;
-  padding: 15px 16px;
+  padding: 0.9375rem 1rem;
 }
 
 .contact-form form textarea {
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
@@ -346,16 +333,16 @@ button:active {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   margin-bottom: 1.5rem;
-  padding: 15px 16px;
+  padding: 0.9375rem 1rem;
   resize: none;
 }
 
 .contact-form form textarea:focus {
-  border: 1px solid #36b37e;
+  border: 1px solid var(--color-darkgreen);
 }
 
 .contact-form form input:focus {
-  border: 1px solid #36b37e;
+  border: 1px solid var(--color-darkgreen);
 }
 
 .contact-form form button {
@@ -372,11 +359,16 @@ button:active {
   border: hidden;
 }
 
-.iconLinks {
+.iconLinks ul {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+.iconLinks li {
+  list-style-type: none;
 }
 
 .supportingText h2 {
@@ -387,4 +379,20 @@ button:active {
   text-align: center;
   color: #42526e;
   margin-bottom: 9.1875rem;
+}
+
+.description-container li:hover {
+  color: var(--color-darkgreen);
+}
+
+.cards li:hover {
+  color: var(--color-darkgreen);
+}
+
+.cards-description li:hover {
+  color: #3a4a42;
+}
+
+.iconLinks li:hover {
+  color: var(--color-darkgreen);
 }
