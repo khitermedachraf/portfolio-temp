@@ -63,6 +63,41 @@ nav {
   cursor: pointer;
 }
 
+nav .drop-button {
+  background-color: transparent;
+  border: none;
+}
+
+nav .drop-down {
+  position: relative;
+  display: inline-block;
+}
+
+nav .drop-down .drop-down-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: var(--color-neutral);
+  min-width: 8rem;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+nav .drop-down .drop-down-content a {
+  color: var(--color-darkblue);
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  display: block;
+}
+
+.drop-down-content a:hover {
+  background-color: var(--color-lightgreen);
+}
+
+.drop-down:hover .drop-down-content {
+  display: block;
+}
+
 .svg:hover path {
   fill: var(--color-darkgreen);
   cursor: pointer;
@@ -185,7 +220,7 @@ p {
   white-space: nowrap;
 }
 
-button {
+.grid-item button {
   background-color: var(--color-darkgreen);
   border-radius: 4px;
   border: hidden;
@@ -198,12 +233,12 @@ button {
   margin: 1.5rem auto;
 }
 
-button:hover {
+.grid-item button:hover {
   box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
   cursor: pointer;
 }
 
-button:active {
+.grid-item button:active {
   background-color: #008552;
 }
 
@@ -419,6 +454,10 @@ button:active {
     padding-bottom: 20rem;
   }
 
+  nav button {
+    background-color: none;
+  }
+
   .header {
     display: none;
   }
@@ -437,6 +476,10 @@ button:active {
   .header-desktop a:visited {
     color: var(--color-darkblue);
     text-decoration: none;
+  }
+
+  .header-desktop a:hover {
+    color: var(--color-darkgreen);
   }
 
   .content {
