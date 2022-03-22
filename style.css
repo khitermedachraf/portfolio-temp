@@ -318,21 +318,44 @@ button:active {
 }
 
 .contact-form form input {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #6b778c;
   height: 48px;
   border: 1px solid var(--color-neutral-border);
   border-radius: 4px;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   margin-bottom: 1.5rem;
+  padding: 15px 16px;
 }
 
 .contact-form form textarea {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #6b778c;
   height: 114px;
   border: 1px solid #60c095;
   border-radius: 4px;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   margin-bottom: 1.5rem;
+  padding: 15px 16px;
+  resize: none;
+}
+
+.contact-form form textarea:focus {
+  border: 1px solid #36b37e;
+}
+
+.contact-form form input:focus {
+  border: 1px solid #36b37e;
 }
 
 .contact-form form button {
