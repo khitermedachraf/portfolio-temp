@@ -150,6 +150,10 @@ nav {
   cursor: pointer;
 }
 
+.circle-button {
+  display: none;
+}
+
 /* ---------------Works Section--------------- */
 .works {
   display: flex;
@@ -424,6 +428,10 @@ nav {
   width: fit-content;
 }
 
+.breakline {
+  display: none;
+}
+
 .iconLinks ul {
   display: flex;
   justify-content: center;
@@ -556,6 +564,24 @@ nav {
   .content h3 {
     color: var(--color-darkgreen);
   }
+
+  .content p {
+    padding: 1.5rem 9rem;
+  }
+
+  .content li {
+    padding-top: 2.25rem;
+    padding-bottom: 5rem;
+  }
+
+  .circle-button {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .circle-button:hover path {
+    fill: var(--color-darkgreen);
+  }
   
   .works img {
     display: none;
@@ -644,11 +670,16 @@ nav {
     left: 1.5rem;
   }
 
+  .breakline {
+    display: block;
+  }
+
   .iconLinks ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 10rem;
+    /* margin: 0.5rem 0; */
+    height: min-content;
   }
 
   .supportingText {
