@@ -512,7 +512,7 @@ nav {
     background-position: top;
     padding-bottom: 20rem;
   }
-  
+
   .header-mobile {
     display: none;
   }
@@ -530,17 +530,17 @@ nav {
     justify-content: center;
     gap: 1rem;
   }
-  
+
   .header-desktop li {
     list-style-type: none;
   }
-  
+
   .header-desktop a,
   .header-desktop a:visited {
     color: var(--color-darkblue);
     text-decoration: none;
   }
-  
+
   .header-desktop a:hover {
     color: var(--color-darkgreen);
   }
@@ -550,7 +550,7 @@ nav {
     padding-right: 12rem;
     margin-top: 10rem;
   }
-  
+
   .content h2,
   .content h3 {
     font-weight: 800;
@@ -560,7 +560,7 @@ nav {
     letter-spacing: 0.37px;
     color: var(--color-darkblue);
   }
-  
+
   .content h3 {
     color: var(--color-darkgreen);
   }
@@ -582,7 +582,7 @@ nav {
   .circle-button:hover path {
     fill: var(--color-darkgreen);
   }
-  
+
   .works img {
     display: none;
   }
@@ -639,6 +639,7 @@ nav {
     height: 300px;
     align-self: center;
   }
+
   .contact-form form input.mobile {
     display: none;
   }
