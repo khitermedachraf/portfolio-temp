@@ -33,15 +33,6 @@ body {
   justify-content: space-between;
 }
 
-@media (min-width: 768px) {
-  .bg-container {
-    background-image: url(./assets/header-d.svg);
-    background-repeat: no-repeat;
-    background-position: top;
-    padding-bottom: 20rem;
-  }
-}
-
 /* ---------------Header Section--------------- */
 .header-mobile {
   display: flex;
@@ -49,44 +40,8 @@ body {
   align-items: center;
 }
 
-@media (min-width: 768px) {
-  .header-mobile {
-    display: none;
-  }
-}
-
 .header-desktop {
   display: none;
-}
-
-@media (min-width: 768px) {
-  .header-desktop {
-    display: block;
-    font-weight: 600;
-    font-size: 1rem;
-    margin-top: 1rem;
-    color: var(--color-darkblue);
-  }
-
-  .header-desktop ul {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .header-desktop li {
-    list-style-type: none;
-  }
-
-  .header-desktop a,
-  .header-desktop a:visited {
-    color: var(--color-darkblue);
-    text-decoration: none;
-  }
-
-  .header-desktop a:hover {
-    color: var(--color-darkgreen);
-  }
 }
 
 .logo-holder {
@@ -195,32 +150,6 @@ nav {
   cursor: pointer;
 }
 
-@media (min-width: 768px) {
-  .content {
-    padding-left: 12rem;
-    padding-right: 12rem;
-    margin-top: 10rem;
-  }
-
-  .content h2,
-  .content h3 {
-    font-weight: 800;
-    font-size: 48px;
-    line-height: 60px;
-    text-align: center;
-    letter-spacing: 0.37px;
-    color: var(--color-darkblue);
-  }
-
-  .content h3 {
-    color: var(--color-darkgreen);
-  }
-
-  .works img {
-    display: none;
-  }
-}
-
 /* ---------------Works Section--------------- */
 .works {
   display: flex;
@@ -251,16 +180,6 @@ nav {
   display: block;
   margin: 0 auto;
   gap: 4.5rem;
-}
-
-@media (min-width: 768px) {
-  .grid-container {
-    display: grid;
-    place-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 1.5rem;
-    margin: 0 8rem;
-  }
 }
 
 .grid-item {
@@ -336,18 +255,6 @@ nav {
   margin-bottom: 2rem;
 }
 
-@media (min-width: 768px) {
-  .aboutMe {
-    background-image: url(./assets/aboutme-d.svg), url(./assets/aboutme2-d.svg);
-    background-position: right top, left bottom;
-    background-repeat: no-repeat, no-repeat;
-    text-align: center;
-    margin: 2rem auto;
-    padding: 10rem 12rem;
-    height: 100vh;
-  }
-}
-
 .aboutMe h2 {
   font-weight: 700;
   font-size: 40px;
@@ -385,17 +292,6 @@ nav {
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
-  .cards-flex-container {
-    display: grid;
-    place-items: center;
-    align-items: stretch;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 1.5rem;
-    margin: 0 8rem;
-  }
-}
-
 .cards-description {
   display: flex;
   flex-direction: column;
@@ -413,13 +309,6 @@ nav {
   max-width: 340px;
   margin-left: auto;
   margin-right: auto;
-}
-
-@media (min-width: 768px) {
-  .cards-description {
-    display: grid;
-    place-items: center stretch;
-  }
 }
 
 .cards-description img {
@@ -464,20 +353,6 @@ nav {
   background-repeat: no-repeat;
 }
 
-@media (min-width: 768px) {
-  .contact-form {
-    background-image: url(./assets/contact-form1-d.svg), url(./assets/contact-form2-d.svg), url(./assets/contact-form3-d.svg);
-    background-position: bottom left, 20% 100%, bottom right;
-    background-repeat: no-repeat;
-    background-size: 10%;
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    align-items: flex-start;
-    padding-bottom: 5rem;
-  }
-}
-
 .contact-form h2 {
   font-weight: 700;
   font-size: 40px;
@@ -487,32 +362,11 @@ nav {
   margin: 3.75rem 1.5rem;
 }
 
-@media (min-width: 768px) {
-  .contact-form h2 {
-    width: 40%;
-    margin-right: 2rem;
-    margin-top: 3rem;
-    font-size: 32px;
-    height: 300px;
-    align-self: center;
-  }
-}
-
 .contact-form form {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   display: flex;
   flex-direction: column;
-}
-
-@media (min-width: 768px) {
-  .contact-form form {
-    width: 60%;
-    margin-top: 5rem;
-    margin-right: 4rem;
-    height: 400px;
-    position: relative;
-  }
 }
 
 .contact-form form input {
@@ -529,29 +383,8 @@ nav {
   padding: 0.9375rem 1rem;
 }
 
-@media (min-width: 768px) {
-  .contact-form form input.mobile {
-    display: none;
-  }
-}
-
 .contact-form form .name-desktop {
   display: none;
-}
-
-@media (min-width: 768px) {
-  .contact-form form .name-desktop {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .contact-form form .name-desktop input.desktop1 {
-    margin-right: 0.5rem;
-  }
-
-  .contact-form form .name-desktop input.desktop2 {
-    margin-left: 0.5rem;
-  }
 }
 
 .contact-form form textarea {
@@ -591,14 +424,6 @@ nav {
   width: fit-content;
 }
 
-@media (min-width: 768px) {
-  .contact-form form button {
-    position: absolute;
-    bottom: 1.5rem;
-    left: 1.5rem;
-  }
-}
-
 .iconLinks ul {
   display: flex;
   justify-content: center;
@@ -607,27 +432,12 @@ nav {
   margin-bottom: 1.5rem;
 }
 
-@media (min-width: 768px) {
-  .iconLinks ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 10rem;
-  }
-}
-
 .iconLinks li {
   list-style-type: none;
 }
 
 .iconLinks svg:hover path {
   fill: var(--color-darkgreen);
-}
-
-@media (min-width: 768px) {
-  .supportingText {
-    display: none;
-  }
 }
 
 .email-me {
@@ -684,4 +494,164 @@ nav {
 
 .cards-description li:hover {
   color: #3a4a42;
+}
+
+/* ---------------Media Query Section --------------- */
+@media (min-width: 768px) {
+  .bg-container {
+    background-image: url(./assets/header-d.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    padding-bottom: 20rem;
+  }
+  
+  .header-mobile {
+    display: none;
+  }
+
+  .header-desktop {
+    display: block;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: var(--color-darkblue);
+  }
+
+  .header-desktop ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .header-desktop li {
+    list-style-type: none;
+  }
+  
+  .header-desktop a,
+  .header-desktop a:visited {
+    color: var(--color-darkblue);
+    text-decoration: none;
+  }
+  
+  .header-desktop a:hover {
+    color: var(--color-darkgreen);
+  }
+
+  .content {
+    padding-left: 12rem;
+    padding-right: 12rem;
+    margin-top: 10rem;
+  }
+  
+  .content h2,
+  .content h3 {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 0.37px;
+    color: var(--color-darkblue);
+  }
+  
+  .content h3 {
+    color: var(--color-darkgreen);
+  }
+  
+  .works img {
+    display: none;
+  }
+
+  .grid-container {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.5rem;
+    margin: 0 8rem;
+  }
+
+  .aboutMe {
+    background-image: url(./assets/aboutme-d.svg), url(./assets/aboutme2-d.svg);
+    background-position: right top, left bottom;
+    background-repeat: no-repeat, no-repeat;
+    text-align: center;
+    margin: 2rem auto;
+    padding: 10rem 12rem;
+    height: 100vh;
+  }
+
+  .cards-flex-container {
+    display: grid;
+    place-items: center;
+    align-items: stretch;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.5rem;
+    margin: 0 8rem;
+  }
+
+  .contact-form {
+    background-image: url(./assets/contact-form1-d.svg), url(./assets/contact-form2-d.svg), url(./assets/contact-form3-d.svg);
+    background-position: bottom left, 20% 100%, bottom right;
+    background-repeat: no-repeat;
+    background-size: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: flex-start;
+    padding-bottom: 5rem;
+  }
+
+  .cards-description {
+    display: grid;
+    place-items: center stretch;
+  }
+
+  .contact-form h2 {
+    width: 40%;
+    margin-right: 2rem;
+    margin-top: 3rem;
+    font-size: 32px;
+    height: 300px;
+    align-self: center;
+  }
+  .contact-form form input.mobile {
+    display: none;
+  }
+
+  .contact-form form {
+    width: 60%;
+    margin-top: 5rem;
+    margin-right: 4rem;
+    height: 400px;
+    position: relative;
+  }
+
+  .contact-form form .name-desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-form form .name-desktop input.desktop1 {
+    margin-right: 0.5rem;
+  }
+
+  .contact-form form .name-desktop input.desktop2 {
+    margin-left: 0.5rem;
+  }
+
+  .contact-form form button {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .iconLinks ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 10rem;
+  }
+
+  .supportingText {
+    display: none;
+  }
 }
