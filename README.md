@@ -34,6 +34,7 @@ Give a ⭐️ if you like this project!
 
 - Microverse
 - Code Reviewers
+- Coding Partners
 
 ## 📝 License
 
