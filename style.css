@@ -24,7 +24,7 @@ body {
   background-color: white;
 }
 
-.backgroundContainer {
+.bg-container {
   background-image: url(./assets/header-m.svg);
   background-repeat: no-repeat;
   background-position: top;
@@ -33,18 +33,63 @@ body {
   justify-content: space-between;
 }
 
+@media (min-width: 768px) {
+  .bg-container {
+    background-image: url(./assets/header-d.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    padding-bottom: 20rem;
+  }
+}
+
 /* ---------------Header Section--------------- */
-.header {
+.header-mobile {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (min-width: 768px) {
+  .header-mobile {
+    display: none;
+  }
 }
 
 .header-desktop {
   display: none;
 }
 
-.logoPlaceholder {
+@media (min-width: 768px) {
+  .header-desktop {
+    display: block;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: var(--color-darkblue);
+  }
+
+  .header-desktop ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .header-desktop li {
+    list-style-type: none;
+  }
+
+  .header-desktop a,
+  .header-desktop a:visited {
+    color: var(--color-darkblue);
+    text-decoration: none;
+  }
+
+  .header-desktop a:hover {
+    color: var(--color-darkgreen);
+  }
+}
+
+.logo-holder {
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
@@ -53,7 +98,7 @@ body {
   color: var(--color-darkblue);
 }
 
-.logoPlaceholder:hover {
+.logo-holder:hover {
   cursor: pointer;
   color: var(--color-darkgreen);
 }
@@ -63,44 +108,48 @@ nav {
   cursor: pointer;
 }
 
-nav .drop-button {
-  background-color: transparent;
-  border: none;
-}
-
-nav .drop-down {
+.dropdown {
   position: relative;
   display: inline-block;
 }
 
-nav .drop-down .drop-down-content {
+.dropdown button {
+  background-color: transparent;
+  border: none;
+}
+
+.dropdown svg:hover path {
+  fill: var(--color-darkgreen);
+  cursor: pointer;
+}
+
+.dropdown-content {
   display: none;
   position: absolute;
   right: 0;
   background-color: var(--color-neutral);
   min-width: 8rem;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
-nav .drop-down .drop-down-content a {
+.dropdown-content li {
+  list-style-type: none;
+}
+
+.dropdown-content a {
   color: var(--color-darkblue);
   padding: 0.75rem 1rem;
   text-decoration: none;
   display: block;
 }
 
-.drop-down-content a:hover {
+.dropdown-content a:hover {
   background-color: var(--color-lightgreen);
 }
 
-.drop-down:hover .drop-down-content {
+.dropdown:hover .dropdown-content {
   display: block;
-}
-
-.svg:hover path {
-  fill: var(--color-darkgreen);
-  cursor: pointer;
 }
 
 /* ---------------Content Section--------------- */
@@ -121,7 +170,7 @@ nav .drop-down .drop-down-content a {
   color: var(--color-darkgreen);
 }
 
-p {
+.content p {
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
@@ -139,6 +188,37 @@ p {
 .content li {
   list-style-type: none;
   padding: 0 0.625rem;
+}
+
+.content svg:hover path {
+  fill: var(--color-darkgreen);
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding-left: 12rem;
+    padding-right: 12rem;
+    margin-top: 10rem;
+  }
+
+  .content h2,
+  .content h3 {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 0.37px;
+    color: var(--color-darkblue);
+  }
+
+  .content h3 {
+    color: var(--color-darkgreen);
+  }
+
+  .works img {
+    display: none;
+  }
 }
 
 /* ---------------Works Section--------------- */
@@ -226,20 +306,11 @@ p {
   border: hidden;
   font-weight: 500;
   font-size: 17px;
-  line-height: 24px;
+  line-height: 1.5rem;
   letter-spacing: 0.03em;
   color: var(--color-white);
   padding: 0.75rem;
   margin: 1.5rem auto;
-}
-
-.grid-item button:hover {
-  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
-  cursor: pointer;
-}
-
-.grid-item button:active {
-  background-color: #008552;
 }
 
 /* ---------------About Me Section--------------- */
@@ -249,6 +320,18 @@ p {
   background-repeat: no-repeat, no-repeat;
   text-align: center;
   padding: 1.875rem;
+}
+
+@media (min-width: 768px) {
+  .aboutMe {
+    background-image: url(./assets/aboutme-d.svg), url(./assets/aboutme2-d.svg);
+    background-position: right top, left bottom;
+    background-repeat: no-repeat, no-repeat;
+    text-align: center;
+    margin: 2rem auto;
+    padding: 10rem 12rem;
+    height: 100vh;
+  }
 }
 
 .aboutMe h2 {
@@ -266,6 +349,19 @@ p {
   text-align: center;
   color: #42526e;
   padding: 0 2.25rem;
+}
+
+.aboutMe button {
+  background-color: var(--color-darkgreen);
+  border-radius: 4px;
+  border: hidden;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.5rem;
+  letter-spacing: 0.03em;
+  color: var(--color-white);
+  padding: 0.75rem;
+  margin: 1.5rem auto;
 }
 
 /* ---------------Cards Section--------------- */
@@ -336,6 +432,20 @@ p {
   background-repeat: no-repeat;
 }
 
+@media (min-width: 768px) {
+  .contact-form {
+    background-image: url(./assets/contact-form1-d.svg), url(./assets/contact-form2-d.svg), url(./assets/contact-form3-d.svg);
+    background-position: bottom left, 20% 100%, bottom right;
+    background-repeat: no-repeat;
+    background-size: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: flex-start;
+    padding-bottom: 5rem;
+  }
+}
+
 .contact-form h2 {
   font-weight: 700;
   font-size: 40px;
@@ -345,11 +455,32 @@ p {
   margin: 3.75rem 1.5rem;
 }
 
+@media (min-width: 768px) {
+  .contact-form h2 {
+    width: 40%;
+    margin-right: 2rem;
+    margin-top: 3rem;
+    font-size: 32px;
+    height: 300px;
+    align-self: center;
+  }
+}
+
 .contact-form form {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .contact-form form {
+    width: 60%;
+    margin-top: 5rem;
+    margin-right: 4rem;
+    height: 400px;
+    position: relative;
+  }
 }
 
 .contact-form form input {
@@ -366,8 +497,29 @@ p {
   padding: 0.9375rem 1rem;
 }
 
+@media (min-width: 768px) {
+  .contact-form form input.mobile {
+    display: none;
+  }
+}
+
 .contact-form form .name-desktop {
   display: none;
+}
+
+@media (min-width: 768px) {
+  .contact-form form .name-desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-form form .name-desktop input.desktop1 {
+    margin-right: 0.5rem;
+  }
+
+  .contact-form form .name-desktop input.desktop2 {
+    margin-left: 0.5rem;
+  }
 }
 
 .contact-form form textarea {
@@ -394,17 +546,25 @@ p {
 }
 
 .contact-form form button {
+  background-color: var(--color-darkgreen);
+  border-radius: 4px;
+  border: hidden;
   font-weight: 500;
   font-size: 17px;
   line-height: 1.5rem;
-  width: fit-content;
   letter-spacing: 0.03em;
-  background-color: var(--color-darkgreen);
-  border-radius: 4px;
-  margin: 1.5rem auto;
+  color: var(--color-white);
   padding: 0.75rem;
-  color: #fff;
-  border: hidden;
+  margin: 1.5rem auto;
+  width: fit-content;
+}
+
+@media (min-width: 768px) {
+  .contact-form form button {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
 }
 
 .iconLinks ul {
@@ -415,18 +575,71 @@ p {
   margin-bottom: 1.5rem;
 }
 
+@media (min-width: 768px) {
+  .iconLinks ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 10rem;
+  }
+}
+
 .iconLinks li {
   list-style-type: none;
 }
 
-.supportingText h2 {
+.iconLinks svg:hover path {
+  fill: var(--color-darkgreen);
+}
+
+@media (min-width: 768px) {
+  .supportingText {
+    display: none;
+  }
+}
+
+.email-me {
+  display: block;
   font-weight: 400;
   font-size: 20px;
   line-height: 32px;
   height: 189px;
   text-align: center;
+  text-decoration: none;
   color: #42526e;
   margin-bottom: 9.1875rem;
+}
+
+.email-me:hover {
+  color: var(--color-darkgreen);
+}
+
+/* ---------------Hover Effects--------------- */
+.grid-item button:hover {
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+  cursor: pointer;
+}
+
+.grid-item button:active {
+  background-color: #008552;
+}
+
+.aboutMe button:hover {
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+  cursor: pointer;
+}
+
+.aboutMe button:active {
+  background-color: #008552;
+}
+
+.contact-form form button:hover {
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+  cursor: pointer;
+}
+
+.contact-form form button:active {
+  background-color: #008552;
 }
 
 .description-container li:hover {
@@ -439,144 +652,4 @@ p {
 
 .cards-description li:hover {
   color: #3a4a42;
-}
-
-.iconLinks li:hover {
-  color: var(--color-darkgreen);
-}
-
-/* ---------------Media Query Section--------------- */
-@media (min-width: 768px) {
-  .backgroundContainer {
-    background-image: url(./assets/header-d.svg);
-    background-repeat: no-repeat;
-    background-position: top;
-    padding-bottom: 20rem;
-  }
-
-  nav button {
-    background-color: none;
-  }
-
-  .header {
-    display: none;
-  }
-
-  .header-desktop {
-    font-weight: 600;
-    font-size: 1rem;
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-    gap: 1rem;
-    color: var(--color-darkblue);
-  }
-  
-  .header-desktop a,
-  .header-desktop a:visited {
-    color: var(--color-darkblue);
-    text-decoration: none;
-  }
-
-  .header-desktop a:hover {
-    color: var(--color-darkgreen);
-  }
-
-  .content {
-    padding-left: 12rem;
-    padding-right: 12rem;
-    margin-top: 10rem;
-  }
-
-  .content h2,
-  .content h3 {
-  font-weight: 800;
-  font-size: 48px;
-  line-height: 60px;
-  text-align: center;
-  letter-spacing: 0.37px;
-  color: var(--color-darkblue);
-  }
-
-  .content h3 {
-    color: var(--color-darkgreen);
-  }
-
-  .works img {
-    display: none;
-  }
-
-  .aboutMe {
-    background-image: url(./assets/aboutme-d.svg), url(./assets/aboutme2-d.svg);
-    background-position: right top, left bottom;
-    background-repeat: no-repeat, no-repeat;
-    text-align: center;
-    margin: 2rem auto;
-    padding: 10rem 12rem;
-    height: 100vh;
-  }
-
-  .contact-form {
-    background-image: url(./assets/contact-form1-d.svg), url(./assets/contact-form2-d.svg), url(./assets/contact-form3-d.svg);
-    background-position: bottom left, 20% 100%, bottom right;
-    background-repeat: no-repeat;
-    background-size: 10%;
-
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    align-items: flex-start;
-    padding-bottom: 5rem;
-  }
-  
-  .contact-form h2 {
-    width: 40%;
-    margin-right: 2rem;
-    margin-top: 3rem;
-    font-size: 32px;
-    height: 300px;
-    align-self: center;
-
-  }
-  
-  .contact-form form {
-    width: 60%;
-    margin-top: 5rem;
-    margin-right: 4rem;
-    height: 400px;
-    position: relative;
-  }
-
-  .contact-form form input.mobile {
-    display: none;
-  }
-
-  .contact-form form .name-desktop {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .contact-form form .name-desktop input.desktop1 {
-    margin-right: 0.5rem;
-  }
-
-  .contact-form form .name-desktop input.desktop2 {
-    margin-left: 0.5rem;
-  }
-
-
-  .contact-form form button {
-    position: absolute;
-    bottom: 1.5rem;
-    left: 1.5rem;
-  }
-
-  .contact-form .iconLinks ul {
-    display: block;
-    height: 10rem;
-  }
-
-  .supportingText {
-    display: none;
-  }
 }
