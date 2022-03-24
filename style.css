@@ -55,6 +55,20 @@ body {
   padding: 0.625rem 0.75rem;
   text-decoration: none;
   color: var(--color-darkblue);
+  animation-name: logo-rotate;
+  animation-duration: 1400ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes logo-rotate {
+  from {
+    transform: rotate(0) scale(0.9);
+  }
+
+  to {
+    transform: rotate(360deg) scale(0.9);
+  }
 }
 
 .logo-holder:hover {
@@ -101,10 +115,12 @@ nav {
   padding: 0.75rem 1rem;
   text-decoration: none;
   display: block;
+  transition-duration: 300ms;
 }
 
 .dropdown-content a:hover {
   background-color: var(--color-lightgreen);
+  transform: scale(1.1);
 }
 
 .dropdown:hover .dropdown-content {
@@ -125,6 +141,30 @@ nav {
   color: var(--color-darkblue);
 }
 
+.content h2 {
+  animation-name: rainbow-text;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  color: transparent;
+  background: linear-gradient(60deg, #20bf55, #01baef, goldenrod, #0cbaba, #380036);
+  -webkit-background-clip: text;
+  background-size: 60% 10%;
+}
+
+@keyframes rainbow-text {
+  0%,
+  100% {
+    background-position: 0 0;
+    transform: scale(1);
+  }
+
+  50% {
+    background-position: 100% 0;
+    transform: scale(1.05);
+  }
+}
+
 .content h3 {
   color: var(--color-darkgreen);
 }
@@ -136,6 +176,12 @@ nav {
   text-align: center;
   color: var(--color-darkblue);
   padding: 1.5625rem;
+}
+
+.content p:hover {
+  transition-duration: 500ms;
+  transform: translateY(2%);
+  color: var(--color-darkgreen);
 }
 
 .content ul {
@@ -203,6 +249,11 @@ nav {
   border-radius: 8px;
   padding-top: 15.75rem;
   margin-bottom: 1.5rem;
+  transition-duration: 500ms;
+}
+
+.grid-item:hover {
+  transform: scale(1.1);
 }
 
 .description-container {
@@ -271,13 +322,19 @@ nav {
   margin-bottom: 1.5rem;
 }
 
-.aboutMe p {
+.p-rotate {
   font-weight: 400;
   font-size: 20px;
   line-height: 32px;
   text-align: center;
   color: #42526e;
   padding: 0 2.25rem;
+}
+
+.p-rotate:hover {
+  transition-duration: 500ms;
+  transform: translateY(2%);
+  color: var(--color-darkgreen);
 }
 
 .aboutMe button {
@@ -317,6 +374,11 @@ nav {
   max-width: 340px;
   margin-left: auto;
   margin-right: auto;
+  transition-duration: 500ms;
+}
+
+.cards-description:hover {
+  transform: scale(1.1);
 }
 
 .cards-description img {
@@ -367,7 +429,24 @@ nav {
   line-height: 52px;
   text-align: center;
   color: var(--color-darkblue);
-  margin: 3.75rem 1.5rem;
+  margin: 4rem 1.5rem;
+}
+
+.contact-form h2:hover {
+  animation-name: slide-in;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-20%);
+    color: var(--color-darkgreen);
+  }
+
+  to {
+    transform: translateY(0);
+  }
 }
 
 .contact-form form {
@@ -471,6 +550,8 @@ nav {
 /* ---------------Hover Effects--------------- */
 .grid-item button:hover {
   box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+  transition-duration: 500ms;
+  background-color: var(--color-darkblue);
   cursor: pointer;
 }
 
@@ -480,6 +561,8 @@ nav {
 
 .aboutMe button:hover {
   box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+  transition-duration: 500ms;
+  background-color: var(--color-darkblue);
   cursor: pointer;
 }
 
@@ -489,6 +572,8 @@ nav {
 
 .contact-form form button:hover {
   box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+  transition-duration: 500ms;
+  background-color: var(--color-darkblue);
   cursor: pointer;
 }
 
@@ -527,6 +612,19 @@ nav {
     font-size: 1rem;
     margin-top: 1rem;
     color: var(--color-darkblue);
+    animation-name: header-onload;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes header-onload {
+    from {
+      transform: translateY(-200%);
+    }
+
+    to {
+      transform: translateY(0);
+    }
   }
 
   .header-desktop ul {
@@ -565,12 +663,29 @@ nav {
     color: var(--color-darkblue);
   }
 
+  .content h2 {
+    animation-name: rainbow-text;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    color: transparent;
+    background: linear-gradient(60deg, #20bf55, #01baef, goldenrod, #0cbaba, #380036);
+    -webkit-background-clip: text;
+    background-size: 60% 10%;
+  }
+
   .content h3 {
     color: var(--color-darkgreen);
   }
 
   .content p {
     padding: 1.5rem 9rem;
+  }
+
+  .content p:hover {
+    transition-duration: 500ms;
+    transform: translateY(2%);
+    color: var(--color-darkgreen);
   }
 
   .content li {
@@ -581,10 +696,19 @@ nav {
   .circle-button {
     display: block;
     margin: 0 auto;
+    transition-duration: 250ms;
   }
 
   .circle-button:hover path {
     fill: var(--color-darkgreen);
+  }
+
+  .circle-button svg:hover {
+    transform: scale(1.2);
+  }
+
+  .circle-button:hover rect {
+    stroke: var(--color-darkgreen);
   }
 
   .works img {
@@ -606,7 +730,7 @@ nav {
     text-align: center;
     margin: 2rem auto;
     padding: 10rem 12rem;
-    height: 100vh;
+    height: 80vh;
   }
 
   .cards-flex-container {
