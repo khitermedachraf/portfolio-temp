@@ -178,6 +178,12 @@ nav {
   padding: 1.5625rem;
 }
 
+.content p:hover {
+  transition-duration: 500ms;
+  transform: translateY(2%);
+  color: var(--color-darkgreen);
+}
+
 .content ul {
   display: flex;
   justify-content: center;
@@ -316,7 +322,7 @@ nav {
   margin-bottom: 1.5rem;
 }
 
-.aboutMe p {
+.p-rotate {
   font-weight: 400;
   font-size: 20px;
   line-height: 32px;
@@ -325,7 +331,7 @@ nav {
   padding: 0 2.25rem;
 }
 
-.aboutMe p:hover {
+.p-rotate:hover {
   transition-duration: 500ms;
   transform: translateY(2%);
   color: var(--color-darkgreen);
@@ -663,6 +669,12 @@ nav {
 
   .content p {
     padding: 1.5rem 9rem;
+  }
+
+  .content p:hover {
+    transition-duration: 500ms;
+    transform: translateY(2%);
+    color: var(--color-darkgreen);
   }
 
   .content li {
