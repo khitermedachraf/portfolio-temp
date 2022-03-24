@@ -10,6 +10,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --color-darkgreen: #36b37e;
   --color-lightgreen: #c5e9da;
