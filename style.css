@@ -42,6 +42,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  animation-name: header-onload;
+  animation-duration: 2000ms;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes header-onload {
+  from {
+    transform: translateY(-200%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
 }
 
 .header-desktop {
@@ -125,6 +138,30 @@ nav {
   line-height: 52px;
   text-align: center;
   color: var(--color-darkblue);
+}
+
+.content h2 {
+  animation-name: rainbow-text;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  color: transparent;
+  background: linear-gradient(60deg, #20bf55, #01baef, goldenrod, #0cbaba, #380036);
+  background-clip: border-box;
+  background-size: 60% 10%;
+}
+
+@keyframes rainbow-text {
+  0%,
+  100% {
+    background-position: 0 0;
+    transform: scale(1);
+  }
+
+  50% {
+    background-position: 100% 0;
+    transform: scale(1.05);
+  }
 }
 
 .content h3 {
@@ -287,6 +324,12 @@ nav {
   padding: 0 2.25rem;
 }
 
+.aboutMe p:hover {
+  transition-duration: 500ms;
+  transform: translateY(2%);
+  color: var(--color-darkgreen);
+}
+
 .aboutMe button {
   background-color: var(--color-darkgreen);
   border-radius: 4px;
@@ -379,7 +422,13 @@ nav {
   line-height: 52px;
   text-align: center;
   color: var(--color-darkblue);
-  margin: 3.75rem 1.5rem;
+  margin: 4rem 1.5rem;
+}
+
+.contact-form h2:hover {
+  transition-duration: 500ms;
+  transform: translateY(2%);
+  color: var(--color-darkgreen);
 }
 
 .contact-form form {
@@ -483,6 +532,8 @@ nav {
 /* ---------------Hover Effects--------------- */
 .grid-item button:hover {
   box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+  transition-duration: 500ms;
+  background-color: var(--color-darkblue);
   cursor: pointer;
 }
 
@@ -492,6 +543,8 @@ nav {
 
 .aboutMe button:hover {
   box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+  transition-duration: 500ms;
+  background-color: var(--color-darkblue);
   cursor: pointer;
 }
 
@@ -501,6 +554,8 @@ nav {
 
 .contact-form form button:hover {
   box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+  transition-duration: 500ms;
+  background-color: var(--color-darkblue);
   cursor: pointer;
 }
 
@@ -539,6 +594,9 @@ nav {
     font-size: 1rem;
     margin-top: 1rem;
     color: var(--color-darkblue);
+    animation-name: header-onload;
+    animation-duration: 2000ms;
+    animation-timing-function: ease-in-out;
   }
 
   .header-desktop ul {
@@ -577,6 +635,18 @@ nav {
     color: var(--color-darkblue);
   }
 
+  .content h2 {
+    animation-name: rainbow-text;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    color: transparent;
+    background: linear-gradient(60deg, #20bf55, #01baef, goldenrod, #0cbaba, #380036);
+    -webkit-background-clip: text;
+    background-clip: border-box;
+    background-size: 60% 10%;
+  }
+
   .content h3 {
     color: var(--color-darkgreen);
   }
@@ -601,7 +671,11 @@ nav {
   }
 
   .circle-button svg:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
+  }
+
+  .circle-button:hover rect {
+    stroke: var(--color-darkgreen);
   }
 
   .works img {
@@ -659,6 +733,12 @@ nav {
     font-size: 32px;
     height: 300px;
     align-self: center;
+  }
+
+  .contact-form h2:hover {
+    transition-duration: 500ms;
+    transform: translateX(2%);
+    color: var(--color-darkgreen);
   }
 
   .contact-form form input.mobile {
