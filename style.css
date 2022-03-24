@@ -42,19 +42,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  animation-name: header-onload;
-  animation-duration: 2000ms;
-  animation-timing-function: ease-in-out;
-}
-
-@keyframes header-onload {
-  from {
-    transform: translateY(-200%);
-  }
-
-  to {
-    transform: translateY(0);
-  }
 }
 
 .header-desktop {
@@ -68,6 +55,20 @@ body {
   padding: 0.625rem 0.75rem;
   text-decoration: none;
   color: var(--color-darkblue);
+  animation-name: logo-rotate;
+  animation-duration: 1400ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes logo-rotate {
+  from {
+    transform: rotate(0) scale(0.9);
+  }
+
+  to {
+    transform: rotate(360deg) scale(0.9);
+  }
 }
 
 .logo-holder:hover {
@@ -595,8 +596,18 @@ nav {
     margin-top: 1rem;
     color: var(--color-darkblue);
     animation-name: header-onload;
-    animation-duration: 2000ms;
+    animation-duration: 1000ms;
     animation-timing-function: ease-in-out;
+  }
+
+  @keyframes header-onload {
+    from {
+      transform: translateY(-200%);
+    }
+
+    to {
+      transform: translateY(0);
+    }
   }
 
   .header-desktop ul {
