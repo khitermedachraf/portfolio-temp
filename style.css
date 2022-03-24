@@ -433,20 +433,9 @@ nav {
 }
 
 .contact-form h2:hover {
-  animation-name: slide-in;
-  animation-duration: 1000ms;
-  animation-timing-function: ease-in-out;
-}
-
-@keyframes slide-in {
-  from {
-    transform: translateX(-20%);
-    color: var(--color-darkgreen);
-  }
-
-  to {
-    transform: translateY(0);
-  }
+  transition-duration: 500ms;
+  transform: translateY(2%);
+  color: var(--color-darkgreen);
 }
 
 .contact-form form {
