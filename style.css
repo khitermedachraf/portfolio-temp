@@ -813,3 +813,7 @@ nav {
 .works h2:hover {
   color: var(--color-darkgreen);
 }
+
+footer {
+  display: none;
+}
