@@ -152,6 +152,10 @@ nav {
   background-size: 60% 10%;
 }
 
+.content h2:hover {
+  animation-play-state: paused;
+}
+
 @keyframes rainbow-text {
   0%,
   100% {
@@ -661,6 +665,10 @@ nav {
     background: linear-gradient(60deg, #20bf55, #01baef, goldenrod, #0cbaba, #380036);
     -webkit-background-clip: text;
     background-size: 60% 10%;
+  }
+
+  .content h2:hover {
+    animation-play-state: paused;
   }
 
   .content h3 {
