@@ -480,10 +480,12 @@ nav {
 
 .contact-form form textarea:focus {
   border: 1px solid var(--color-darkgreen);
+  background-color: var(--color-lightgreen);
 }
 
 .contact-form form input:focus {
   border: 1px solid var(--color-darkgreen);
+  background-color: var(--color-lightgreen);
 }
 
 .contact-form form button {
