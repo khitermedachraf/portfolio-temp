@@ -11,9 +11,9 @@
 - VS Code
 - Figma (Template 3)
 
-## Application Deploy
+## Live Demo
 
-[Link to GitHub Page: ](https://mavericks-db.github.io/portfolio/):point_left:
+Click [here](https://mavericks-db.github.io/portfolio/):point_left:
 
 ## Author
 

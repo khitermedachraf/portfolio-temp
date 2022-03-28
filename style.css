@@ -226,10 +226,6 @@ nav {
   color: var(--color-darkblue);
 }
 
-.works h2:hover {
-  color: var(--color-darkgreen);
-}
-
 .works img {
   margin: 0 auto;
   padding-bottom: 3.125rem;
@@ -324,10 +320,6 @@ nav {
   line-height: 52px;
   color: var(--color-darkblue);
   margin-bottom: 1.5rem;
-}
-
-.aboutMe h2:hover {
-  color: var(--color-darkgreen);
 }
 
 .p-rotate {
@@ -812,4 +804,12 @@ nav {
   .supportingText {
     display: none;
   }
+}
+
+.aboutMe h2:hover {
+  color: var(--color-darkgreen);
+}
+
+.works h2:hover {
+  color: var(--color-darkgreen);
 }
