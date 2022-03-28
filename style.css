@@ -152,10 +152,6 @@ nav {
   background-size: 60% 10%;
 }
 
-.content h2:hover {
-  animation-play-state: paused;
-}
-
 @keyframes rainbow-text {
   0%,
   100% {
@@ -667,10 +663,6 @@ nav {
     background-size: 60% 10%;
   }
 
-  .content h2:hover {
-    animation-play-state: paused;
-  }
-
   .content h3 {
     color: var(--color-darkgreen);
   }
@@ -812,6 +804,10 @@ nav {
   .supportingText {
     display: none;
   }
+}
+
+.content h2:hover {
+  animation-play-state: paused;
 }
 
 .aboutMe h2:hover {
