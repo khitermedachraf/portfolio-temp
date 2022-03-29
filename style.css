@@ -102,7 +102,7 @@ nav {
   right: 0;
   background-color: var(--color-neutral);
   min-width: 8rem;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -448,7 +448,7 @@ nav {
 .contact-form form input {
   font-weight: 400;
   font-size: 15px;
-  line-height: 24px;
+  line-height: 25px;
   color: #6b778c;
   height: 48px;
   border: 1px solid var(--color-neutral-border);
@@ -468,13 +468,13 @@ nav {
   font-size: 15px;
   line-height: 24px;
   color: #6b778c;
-  height: 114px;
+  height: 116px;
   border: 1px solid #60c095;
   border-radius: 4px;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   margin-bottom: 1.5rem;
-  padding: 0.9375rem 1rem;
+  padding: 1rem 1rem;
   resize: none;
 }
 
@@ -495,9 +495,9 @@ nav {
   font-weight: 500;
   font-size: 17px;
   line-height: 1.5rem;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
   color: var(--color-white);
-  padding: 0.75rem;
+  padding: 0.9rem;
   margin: 1.5rem auto;
   width: fit-content;
 }
