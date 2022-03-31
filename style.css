@@ -650,6 +650,26 @@ nav {
   .header-desktop a:visited {
     color: var(--color-darkblue);
     text-decoration: none;
+    display: inline-block;
+    position: relative;
+  }
+
+  .header-desktop a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-neutral-border);
+    transform-origin: bottom right;
+    transition: transform 500ms ease-out;
+  }
+
+  .header-desktop a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
 
   .header-desktop a:hover {
