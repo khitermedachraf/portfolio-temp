@@ -246,6 +246,7 @@ nav {
 .works img {
   margin: 0 auto;
   padding-bottom: 3.125rem;
+  max-width: 100%;
 }
 
 .grid-container {
@@ -402,6 +403,7 @@ nav {
   padding-top: 1rem;
   padding-bottom: 1rem;
   height: 180px;
+  max-width: 100%;
 }
 
 .cards-description h2 {
