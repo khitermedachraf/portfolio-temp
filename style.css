@@ -31,7 +31,8 @@ body {
 .bg-container {
   background-image: url(./assets/header-m.svg);
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: 0 2.8rem;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -617,7 +618,8 @@ nav {
   .bg-container {
     background-image: url(./assets/header-d.svg);
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
+    background-size: cover;
     padding-bottom: 20rem;
   }
 
