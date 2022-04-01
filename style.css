@@ -90,8 +90,6 @@ nav {
 .closeBtn {
   float: right;
   padding: 0.25rem;
-  width: 2.75rem;
-  height: 2.75rem;
 }
 
 .closeBtn:hover path,
