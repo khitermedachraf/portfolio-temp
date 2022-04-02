@@ -15,6 +15,11 @@ html {
 }
 
 :root {
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
   --color-darkgreen: #36b37e;
   --color-lightgreen: #c5e9da;
   --color-neutral: #ebf0ee;
@@ -56,7 +61,7 @@ nav {
 }
 
 .logo-holder {
-  font-weight: 600;
+  font-weight: var(--fw-600);
   font-size: 20px;
   line-height: 28px;
   padding: 0.625rem 0.75rem;
@@ -123,7 +128,7 @@ nav {
 
 .modalContent li {
   list-style-type: none;
-  font-weight: 600;
+  font-weight: var(--fw-600);
   font-size: 1.75rem;
   line-height: 2.75rem;
 }
@@ -152,7 +157,7 @@ nav {
 
 .content h1,
 .content h2 {
-  font-weight: 700;
+  font-weight: var(--fw-700);
   font-size: 40px;
   line-height: 52px;
   text-align: center;
@@ -188,7 +193,7 @@ nav {
 }
 
 .content p {
-  font-weight: 400;
+  font-weight: var(--fw-400);
   font-size: 20px;
   line-height: 28px;
   text-align: center;
@@ -233,7 +238,7 @@ nav {
 }
 
 .works h2 {
-  font-weight: 700;
+  font-weight: var(--fw-700);
   font-size: 40px;
   line-height: 52px;
   margin-bottom: 30px;
@@ -286,7 +291,7 @@ nav {
 }
 
 .description-container h3 {
-  font-weight: 600;
+  font-weight: var(--fw-600);
   font-size: 24px;
   line-height: 32px;
   color: var(--color-darkblue);
@@ -300,7 +305,7 @@ nav {
 
 .description-container li {
   list-style-type: none;
-  font-weight: 600;
+  font-weight: var(--fw-600);
   font-size: 12px;
   line-height: 16px;
   background-color: var(--color-neutral);
@@ -316,7 +321,7 @@ nav {
   background-color: var(--color-darkgreen);
   border-radius: 4px;
   border: hidden;
-  font-weight: 500;
+  font-weight: var(--fw-500);
   font-size: 17px;
   line-height: 1.5rem;
   letter-spacing: 0.03em;
@@ -337,7 +342,7 @@ nav {
 }
 
 .aboutMe h2 {
-  font-weight: 700;
+  font-weight: var(--fw-700);
   font-size: 40px;
   line-height: 52px;
   color: var(--color-darkblue);
@@ -345,7 +350,7 @@ nav {
 }
 
 .p-rotate {
-  font-weight: 400;
+  font-weight: var(--fw-400);
   font-size: 20px;
   line-height: 32px;
   text-align: center;
@@ -363,7 +368,7 @@ nav {
   background-color: var(--color-darkgreen);
   border-radius: 4px;
   border: hidden;
-  font-weight: 500;
+  font-weight: var(--fw-500);
   font-size: 17px;
   line-height: 1.5rem;
   letter-spacing: 0.03em;
@@ -411,7 +416,7 @@ nav {
 }
 
 .cards-description h2 {
-  font-weight: 600;
+  font-weight: var(--fw-600);
   font-size: 24px;
   line-height: 32px;
   color: #344563;
@@ -437,7 +442,7 @@ nav {
 
 .cards-description li {
   list-style-type: none;
-  font-weight: 600;
+  font-weight: var(--fw-600);
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.03em;
@@ -457,7 +462,7 @@ nav {
 }
 
 .contact-form h2 {
-  font-weight: 700;
+  font-weight: var(--fw-700);
   font-size: 40px;
   line-height: 52px;
   text-align: center;
@@ -479,7 +484,7 @@ nav {
 }
 
 .contact-form form input {
-  font-weight: 400;
+  font-weight: var(--fw-400);
   font-size: 15px;
   line-height: 25px;
   color: #6b778c;
@@ -497,7 +502,7 @@ nav {
 }
 
 .contact-form form textarea {
-  font-weight: 400;
+  font-weight: var(--fw-400);
   font-size: 15px;
   line-height: 24px;
   color: #6b778c;
@@ -525,7 +530,7 @@ nav {
   background-color: var(--color-darkgreen);
   border-radius: 4px;
   border: hidden;
-  font-weight: 500;
+  font-weight: var(--fw-500);
   font-size: 17px;
   line-height: 1.5rem;
   letter-spacing: 0.03em;
@@ -557,7 +562,7 @@ nav {
 
 .email-me {
   display: block;
-  font-weight: 400;
+  font-weight: var(--fw-400);
   font-size: 20px;
   line-height: 32px;
   height: 189px;
@@ -634,7 +639,7 @@ nav {
 
   .header-desktop {
     display: block;
-    font-weight: 600;
+    font-weight: var(--fw-600);
     font-size: 1rem;
     margin-top: 1rem;
     color: var(--color-darkblue);
@@ -701,7 +706,7 @@ nav {
 
   .content h1,
   .content h2 {
-    font-weight: 800;
+    font-weight: var(--fw-800);
     font-size: 48px;
     line-height: 60px;
     text-align: center;
