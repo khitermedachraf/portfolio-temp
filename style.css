@@ -430,7 +430,7 @@ nav {
 
 .langUl {
   position: relative;
-  bottom: 2.5rem;
+  bottom: 1rem;
 }
 
 .cardsDescription ul {
@@ -807,6 +807,11 @@ nav {
   .cardsDescription {
     display: grid;
     place-items: center stretch;
+  }
+
+  .langUl {
+    position: relative;
+    bottom: 2.5rem;
   }
 
   .contactForm h2 {
