@@ -467,7 +467,7 @@ nav {
   line-height: 52px;
   text-align: center;
   color: var(--color-darkblue);
-  margin: 4rem 1.5rem;
+  padding: 2rem;
 }
 
 .contactForm h2:hover {
@@ -811,8 +811,8 @@ nav {
 
   .contactForm h2 {
     width: 40%;
-    margin-right: 2rem;
-    margin-top: 3rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
     font-size: 32px;
     height: 300px;
     align-self: center;
