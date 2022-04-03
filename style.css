@@ -27,10 +27,11 @@ html {
   --color-white: #fff;
   --color-neutral-border: #d0d9d4;
   --color-grey-text: #3a4a42;
+  --borderCheck: 1px solid crimson;
 }
 
 body {
-  background-color: white;
+  background-color: var(--color-white);
 }
 
 .bg-container {
@@ -110,7 +111,7 @@ nav {
   cursor: pointer;
 }
 
-.modalContent {
+.modalContainer {
   display: none;
   position: absolute;
   left: 0;
@@ -126,7 +127,7 @@ nav {
   z-index: 1;
 }
 
-.modalContent li {
+.modalContainer li {
   list-style-type: none;
   font-weight: var(--fw-600);
   font-size: 1.75rem;
@@ -223,7 +224,7 @@ nav {
   cursor: pointer;
 }
 
-.circle-button {
+.circleBtn {
   display: none;
 }
 
@@ -255,14 +256,14 @@ nav {
   max-width: 100%;
 }
 
-.grid-container {
+.gridContainer {
   display: block;
   max-width: 100%;
   margin: 0 auto;
   gap: 1rem;
 }
 
-.grid-item {
+.gridItem {
   display: grid;
   place-content: center;
   text-align: center;
@@ -278,11 +279,11 @@ nav {
   transition-duration: 500ms;
 }
 
-.grid-item:hover {
+.gridItem:hover {
   transform: scale(1.1);
 }
 
-.description-container {
+.descriptionContainer {
   display: flex;
   flex-direction: column;
   width: auto;
@@ -290,7 +291,7 @@ nav {
   border-radius: 8px;
 }
 
-.description-container h3 {
+.descriptionContainer h3 {
   font-weight: var(--fw-600);
   font-size: 24px;
   line-height: 32px;
@@ -298,12 +299,12 @@ nav {
   margin: 1rem;
 }
 
-.description-container ul {
+.descriptionContainer ul {
   display: flex;
   justify-content: center;
 }
 
-.description-container li {
+.descriptionContainer li {
   list-style-type: none;
   font-weight: var(--fw-600);
   font-size: 12px;
@@ -317,7 +318,7 @@ nav {
   white-space: nowrap;
 }
 
-.grid-item button {
+.gridItem button {
   background-color: var(--color-darkgreen);
   border-radius: 4px;
   border: hidden;
@@ -577,14 +578,14 @@ nav {
 }
 
 /* ---------------Hover Effects--------------- */
-.grid-item button:hover {
+.gridItem button:hover {
   box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
   transition-duration: 500ms;
   background-color: var(--color-darkblue);
   cursor: pointer;
 }
 
-.grid-item button:active {
+.gridItem button:active {
   background-color: #008552;
 }
 
@@ -610,7 +611,7 @@ nav {
   background-color: #008552;
 }
 
-.description-container li:hover {
+.descriptionContainer li:hover {
   color: var(--color-darkgreen);
 }
 
@@ -744,21 +745,21 @@ nav {
     padding-bottom: 5rem;
   }
 
-  .circle-button {
+  .circleBtn {
     display: block;
     margin: 0 auto;
     transition-duration: 250ms;
   }
 
-  .circle-button:hover path {
+  .circleBtn:hover path {
     fill: var(--color-darkgreen);
   }
 
-  .circle-button svg:hover {
+  .circleBtn svg:hover {
     transform: scale(1.2);
   }
 
-  .circle-button:hover rect {
+  .circleBtn:hover rect {
     stroke: var(--color-darkgreen);
   }
 
@@ -766,7 +767,7 @@ nav {
     display: none;
   }
 
-  .grid-container {
+  .gridContainer {
     display: grid;
     place-items: center;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
