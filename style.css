@@ -162,7 +162,6 @@ nav {
   font-size: 40px;
   line-height: 52px;
   text-align: center;
-  color: var(--color-darkblue);
 }
 
 .content h1 {
@@ -379,13 +378,13 @@ nav {
 }
 
 /* ---------------Cards Section--------------- */
-.cards-flex-container {
+.cardsContainer {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
 }
 
-.cards-description {
+.cardsDescription {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -405,18 +404,18 @@ nav {
   transition-duration: 500ms;
 }
 
-.cards-description:hover {
+.cardsDescription:hover {
   transform: scale(1.1);
 }
 
-.cards-description img {
+.cardsDescription img {
   padding-top: 1rem;
   padding-bottom: 1rem;
   height: auto;
   max-width: 100%;
 }
 
-.cards-description h2 {
+.cardsDescription h2 {
   font-weight: var(--fw-600);
   font-size: 24px;
   line-height: 32px;
@@ -434,14 +433,14 @@ nav {
   bottom: 2.5rem;
 }
 
-.cards-description ul {
+.cardsDescription ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
 }
 
-.cards-description li {
+.cardsDescription li {
   list-style-type: none;
   font-weight: var(--fw-600);
   font-size: 12px;
@@ -456,13 +455,13 @@ nav {
 }
 
 /* ---------------Contact Form Section--------------- */
-.contact-form {
+.contactForm {
   background-image: url(./assets/contact-form-m.svg);
   background-position: bottom right;
   background-repeat: no-repeat;
 }
 
-.contact-form h2 {
+.contactForm h2 {
   font-weight: var(--fw-700);
   font-size: 40px;
   line-height: 52px;
@@ -471,20 +470,20 @@ nav {
   margin: 4rem 1.5rem;
 }
 
-.contact-form h2:hover {
+.contactForm h2:hover {
   transition-duration: 500ms;
   transform: translateY(2%);
   color: var(--color-darkgreen);
 }
 
-.contact-form form {
+.contactForm form {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   display: flex;
   flex-direction: column;
 }
 
-.contact-form form input {
+.contactForm form input {
   font-weight: var(--fw-400);
   font-size: 15px;
   line-height: 25px;
@@ -498,11 +497,11 @@ nav {
   padding: 0.9375rem 1rem;
 }
 
-.contact-form form .name-desktop {
+.contactForm form .name-desktop {
   display: none;
 }
 
-.contact-form form textarea {
+.contactForm form textarea {
   font-weight: var(--fw-400);
   font-size: 15px;
   line-height: 24px;
@@ -517,17 +516,17 @@ nav {
   resize: none;
 }
 
-.contact-form form textarea:focus {
+.contactForm form textarea:focus {
   border: 1px solid var(--color-darkgreen);
   background-color: var(--color-lightgreen);
 }
 
-.contact-form form input:focus {
+.contactForm form input:focus {
   border: 1px solid var(--color-darkgreen);
   background-color: var(--color-lightgreen);
 }
 
-.contact-form form button {
+.contactForm form button {
   background-color: var(--color-darkgreen);
   border-radius: 4px;
   border: hidden;
@@ -561,7 +560,7 @@ nav {
   fill: var(--color-darkgreen);
 }
 
-.email-me {
+.emailMe {
   display: block;
   font-weight: var(--fw-400);
   font-size: 20px;
@@ -573,7 +572,7 @@ nav {
   margin-bottom: 9.1875rem;
 }
 
-.email-me:hover {
+.emailMe:hover {
   color: var(--color-darkgreen);
 }
 
@@ -600,14 +599,14 @@ nav {
   background-color: #008552;
 }
 
-.contact-form form button:hover {
+.contactForm form button:hover {
   box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
   transition-duration: 500ms;
   background-color: var(--color-darkblue);
   cursor: pointer;
 }
 
-.contact-form form button:active {
+.contactForm form button:active {
   background-color: #008552;
 }
 
@@ -615,11 +614,11 @@ nav {
   color: var(--color-darkgreen);
 }
 
-.cards-description h2:hover {
+.cardsDescription h2:hover {
   color: var(--color-darkgreen);
 }
 
-.cards-description li:hover {
+.cardsDescription li:hover {
   color: #3a4a42;
 }
 
@@ -712,7 +711,6 @@ nav {
     line-height: 60px;
     text-align: center;
     letter-spacing: 0.37px;
-    color: var(--color-darkblue);
   }
 
   .content h1 {
@@ -785,7 +783,7 @@ nav {
     height: auto;
   }
 
-  .cards-flex-container {
+  .cardsContainer {
     display: grid;
     place-items: center;
     align-items: stretch;
@@ -794,7 +792,7 @@ nav {
     margin: 0 8rem;
   }
 
-  .contact-form {
+  .contactForm {
     background-image: url(./assets/contact-form1-d.svg), url(./assets/contact-form2-d.svg), url(./assets/contact-form3-d.svg);
     background-position: bottom left, 20% 100%, bottom right;
     background-repeat: no-repeat;
@@ -806,12 +804,12 @@ nav {
     padding-bottom: 5rem;
   }
 
-  .cards-description {
+  .cardsDescription {
     display: grid;
     place-items: center stretch;
   }
 
-  .contact-form h2 {
+  .contactForm h2 {
     width: 40%;
     margin-right: 2rem;
     margin-top: 3rem;
@@ -820,11 +818,11 @@ nav {
     align-self: center;
   }
 
-  .contact-form form input.mobile {
+  .contactForm form input.mobile {
     display: none;
   }
 
-  .contact-form form {
+  .contactForm form {
     width: 60%;
     margin-top: 5rem;
     margin-right: 4rem;
@@ -832,20 +830,20 @@ nav {
     position: relative;
   }
 
-  .contact-form form .name-desktop {
+  .contactForm form .name-desktop {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
-  .contact-form form .name-desktop input.desktop1 {
+  .contactForm form .name-desktop input.desktop1 {
     margin-right: 0.5rem;
   }
 
-  .contact-form form .name-desktop input.desktop2 {
+  .contactForm form .name-desktop input.desktop2 {
     margin-left: 0.5rem;
   }
 
-  .contact-form form button {
+  .contactForm form button {
     position: absolute;
     bottom: 1.5rem;
     left: 1.5rem;
