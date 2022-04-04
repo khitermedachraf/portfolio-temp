@@ -177,6 +177,7 @@ nav {
 }
 
 @keyframes rainbow-text {
+
   0%,
   100% {
     background-position: 0 0;
@@ -250,7 +251,7 @@ nav {
   color: var(--color-darkblue);
 }
 
-.works img {
+.indicator {
   margin: 0 auto;
   padding-bottom: 3.125rem;
   max-width: 100%;
@@ -358,6 +359,7 @@ nav {
   top: 3rem;
   right: 3rem;
   background-color: transparent;
+  padding-bottom: 0;
 }
 
 .projectImgMobile {
@@ -391,14 +393,15 @@ nav {
   padding: 0.5rem;
 }
 
-.mobileMCContainer p {
+.projectDescription {
   display: block;
   color: #344563;
   font-weight: 400;
   font-size: 1rem;
   line-height: 24px;
-  margin: 12px 12px;
+  /* margin: 12px 12px; */
   text-align: left;
+  margin-bottom: 2rem;
 }
 
 .buttonContainerMobile {
@@ -407,20 +410,24 @@ nav {
   place-content: center;
 }
 
-.buttonContainerMobile button {
+.liveBtn,
+.srcBtn {
   display: flex;
   flex-direction: row;
   align-content: center;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 24px;
   text-align: center;
-  background-color: #36b37f;
-  margin: 0 auto;
+  background-color: var(--color-darkgreen);
   border-radius: 4px;
-  color: white;
-  border: none;
-  height: 50px;
+  border: hidden;
+  font-weight: var(--fw-500);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.03em;
+  color: var(--color-white);
+  padding: 0.75rem;
+  margin: 0 auto;
+  height: 60px;
+  width: 120px;
 }
 
 /* ---------------About Me Section--------------- */
