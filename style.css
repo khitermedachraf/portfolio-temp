@@ -118,7 +118,7 @@ nav {
   right: 0;
   top: 0;
   bottom: 0;
-  background-image: linear-gradient(60deg, #fff 0%, #d7e1ec 74%);
+  background-color: #fff;
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -170,7 +170,14 @@ nav {
   animation-iteration-count: infinite;
   animation-timing-function: ease-in;
   color: transparent;
-  background: linear-gradient(60deg, #20bf55, #01baef, goldenrod, #0cbaba, #380036);
+  background: linear-gradient(
+    60deg,
+    #20bf55,
+    #01baef,
+    goldenrod,
+    #0cbaba,
+    #380036
+  );
   -webkit-background-clip: text;
   background-size: 60% 10%;
 }
@@ -719,7 +726,14 @@ nav {
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
     color: transparent;
-    background: linear-gradient(60deg, #20bf55, #01baef, goldenrod, #0cbaba, #380036);
+    background: linear-gradient(
+      60deg,
+      #20bf55,
+      #01baef,
+      goldenrod,
+      #0cbaba,
+      #380036
+    );
     -webkit-background-clip: text;
     background-size: 60% 10%;
   }
@@ -793,7 +807,8 @@ nav {
   }
 
   .contactForm {
-    background-image: url(./assets/contact-form1-d.svg), url(./assets/contact-form2-d.svg), url(./assets/contact-form3-d.svg);
+    background-image: url(./assets/contact-form1-d.svg),
+      url(./assets/contact-form2-d.svg), url(./assets/contact-form3-d.svg);
     background-position: bottom left, 20% 100%, bottom right;
     background-repeat: no-repeat;
     background-size: 10%;
