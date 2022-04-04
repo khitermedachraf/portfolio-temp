@@ -27,6 +27,7 @@ html {
   --color-white: #fff;
   --color-neutral-border: #d0d9d4;
   --color-grey-text: #3a4a42;
+  --color-modal-background: #c1c7d0;
   --borderCheck: 1px solid crimson;
 }
 
@@ -276,6 +277,7 @@ nav {
   padding-top: 15.75rem;
   margin-bottom: 1.5rem;
   transition-duration: 500ms;
+  position: relative;
 }
 
 .gridItem:hover {
@@ -328,6 +330,97 @@ nav {
   color: var(--color-white);
   padding: 0.75rem;
   margin: 1.5rem auto;
+}
+
+/* ---------------Modal Section--------------- */
+.mobileModal {
+  display: none;
+  position: absolute;
+  height: max-content;
+  width: 100%;
+  z-index: 10;
+  background-color: var(--color-modal-background);
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+
+.mobileMCContainer {
+  margin: 1rem;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.closeMobile {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  background-color: transparent;
+}
+
+.projectImgMobile {
+  display: block;
+  padding-bottom: 0;
+  width: 100%;
+}
+
+.mobileMCContainer h2 {
+  font-weight: var(--fw-600);
+  font-size: 32px;
+  line-height: 44px;
+  color: #172B4D;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.mobileMCContainer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.mobileMCContainer li {
+  background-color: #ebf0ee;
+  list-style-type: none;
+  border-radius: 4px;
+  margin: 0.5rem 8px;
+  padding: 0.5rem;
+}
+
+.mobileMCContainer p {
+  display: block;
+  color: #344563;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 24px;
+  margin: 12px 12px;
+  text-align: left;
+}
+
+.buttonContainerMobile {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  place-content: center;
+}
+
+.buttonContainerMobile button {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 24px;
+  text-align: center;
+  background-color: #36b37f;
+  margin: 0 auto;
+  border-radius: 4px;
+  color: white;
+  border: none;
+  height: 50px;
 }
 
 /* ---------------About Me Section--------------- */
