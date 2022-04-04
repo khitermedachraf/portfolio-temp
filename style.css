@@ -15,6 +15,11 @@ html {
 }
 
 :root {
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
   --color-darkgreen: #36b37e;
   --color-lightgreen: #c5e9da;
   --color-neutral: #ebf0ee;
@@ -22,19 +27,22 @@ html {
   --color-white: #fff;
   --color-neutral-border: #d0d9d4;
   --color-grey-text: #3a4a42;
+  --borderCheck: 1px solid crimson;
 }
 
 body {
-  background-color: white;
+  background-color: var(--color-white);
 }
 
 .bg-container {
   background-image: url(./assets/header-m.svg);
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: 0 2.8rem;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: auto;
 }
 
 /* ---------------Header Section--------------- */
@@ -54,7 +62,7 @@ nav {
 }
 
 .logo-holder {
-  font-weight: 600;
+  font-weight: var(--fw-600);
   font-size: 20px;
   line-height: 28px;
   padding: 0.625rem 0.75rem;
@@ -89,8 +97,6 @@ nav {
 .closeBtn {
   float: right;
   padding: 0.25rem;
-  width: 3rem;
-  height: 3rem;
 }
 
 .closeBtn:hover path,
@@ -105,14 +111,14 @@ nav {
   cursor: pointer;
 }
 
-.modalContent {
+.modalContainer {
   display: none;
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: var(--color-white);
+  background-color: #fff;
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -121,9 +127,9 @@ nav {
   z-index: 1;
 }
 
-.modalContent li {
+.modalContainer li {
   list-style-type: none;
-  font-weight: 600;
+  font-weight: var(--fw-600);
   font-size: 1.75rem;
   line-height: 2.75rem;
 }
@@ -133,7 +139,7 @@ nav {
 }
 
 .links {
-  color: var(--color-darkblue);
+  color: var(--color-grey-text);
   padding: 0.75rem 1rem;
   text-decoration: none;
   display: block;
@@ -152,11 +158,10 @@ nav {
 
 .content h1,
 .content h2 {
-  font-weight: 700;
+  font-weight: var(--fw-700);
   font-size: 40px;
   line-height: 52px;
   text-align: center;
-  color: var(--color-darkblue);
 }
 
 .content h1 {
@@ -188,7 +193,7 @@ nav {
 }
 
 .content p {
-  font-weight: 400;
+  font-weight: var(--fw-400);
   font-size: 20px;
   line-height: 28px;
   text-align: center;
@@ -218,7 +223,7 @@ nav {
   cursor: pointer;
 }
 
-.circle-button {
+.circleBtn {
   display: none;
 }
 
@@ -233,7 +238,7 @@ nav {
 }
 
 .works h2 {
-  font-weight: 700;
+  font-weight: var(--fw-700);
   font-size: 40px;
   line-height: 52px;
   margin-bottom: 30px;
@@ -247,22 +252,25 @@ nav {
 .works img {
   margin: 0 auto;
   padding-bottom: 3.125rem;
+  max-width: 100%;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr;
+.gridContainer {
+  display: block;
+  max-width: 100%;
   margin: 0 auto;
   gap: 1rem;
 }
 
-.grid-item {
+.gridItem {
   display: grid;
   place-content: center;
   text-align: center;
   column-gap: 1.5rem;
   background-color: var(--color-neutral);
   width: min-content;
+  margin-left: auto;
+  margin-right: auto;
   border: 1px solid var(--color-neutral-border);
   border-radius: 8px;
   padding-top: 15.75rem;
@@ -270,11 +278,11 @@ nav {
   transition-duration: 500ms;
 }
 
-.grid-item:hover {
+.gridItem:hover {
   transform: scale(1.1);
 }
 
-.description-container {
+.descriptionContainer {
   display: flex;
   flex-direction: column;
   width: auto;
@@ -282,22 +290,22 @@ nav {
   border-radius: 8px;
 }
 
-.description-container h3 {
-  font-weight: 600;
+.descriptionContainer h3 {
+  font-weight: var(--fw-600);
   font-size: 24px;
   line-height: 32px;
   color: var(--color-darkblue);
   margin: 1rem;
 }
 
-.description-container ul {
+.descriptionContainer ul {
   display: flex;
   justify-content: center;
 }
 
-.description-container li {
+.descriptionContainer li {
   list-style-type: none;
-  font-weight: 600;
+  font-weight: var(--fw-600);
   font-size: 12px;
   line-height: 16px;
   background-color: var(--color-neutral);
@@ -309,11 +317,11 @@ nav {
   white-space: nowrap;
 }
 
-.grid-item button {
+.gridItem button {
   background-color: var(--color-darkgreen);
   border-radius: 4px;
   border: hidden;
-  font-weight: 500;
+  font-weight: var(--fw-500);
   font-size: 17px;
   line-height: 1.5rem;
   letter-spacing: 0.03em;
@@ -330,10 +338,11 @@ nav {
   text-align: center;
   padding: 1.875rem;
   margin-bottom: 2rem;
+  height: auto;
 }
 
 .aboutMe h2 {
-  font-weight: 700;
+  font-weight: var(--fw-700);
   font-size: 40px;
   line-height: 52px;
   color: var(--color-darkblue);
@@ -341,7 +350,7 @@ nav {
 }
 
 .p-rotate {
-  font-weight: 400;
+  font-weight: var(--fw-400);
   font-size: 20px;
   line-height: 32px;
   text-align: center;
@@ -359,7 +368,7 @@ nav {
   background-color: var(--color-darkgreen);
   border-radius: 4px;
   border: hidden;
-  font-weight: 500;
+  font-weight: var(--fw-500);
   font-size: 17px;
   line-height: 1.5rem;
   letter-spacing: 0.03em;
@@ -369,13 +378,13 @@ nav {
 }
 
 /* ---------------Cards Section--------------- */
-.cards-flex-container {
+.cardsContainer {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
 }
 
-.cards-description {
+.cardsDescription {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -388,41 +397,52 @@ nav {
   padding-bottom: 2rem;
   margin-bottom: 1.5rem;
   width: auto;
-  min-width: 340px;
-  max-width: 340px;
+  min-width: 355px;
+  max-width: 355px;
   margin-left: auto;
   margin-right: auto;
   transition-duration: 500ms;
 }
 
-.cards-description:hover {
+.cardsDescription:hover {
   transform: scale(1.1);
 }
 
-.cards-description img {
+.cardsDescription img {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  height: 180px;
+  height: auto;
+  max-width: 100%;
 }
 
-.cards-description h2 {
-  font-weight: 600;
+.cardsDescription h2 {
+  font-weight: var(--fw-600);
   font-size: 24px;
   line-height: 32px;
   color: #344563;
   padding: 0.75rem;
 }
 
-.cards-description ul {
+.lang {
+  position: relative;
+  bottom: 1.5rem;
+}
+
+.langUl {
+  position: relative;
+  bottom: 1rem;
+}
+
+.cardsDescription ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
 }
 
-.cards-description li {
+.cardsDescription li {
   list-style-type: none;
-  font-weight: 600;
+  font-weight: var(--fw-600);
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.03em;
@@ -435,36 +455,36 @@ nav {
 }
 
 /* ---------------Contact Form Section--------------- */
-.contact-form {
+.contactForm {
   background-image: url(./assets/contact-form-m.svg);
   background-position: bottom right;
   background-repeat: no-repeat;
 }
 
-.contact-form h2 {
-  font-weight: 700;
+.contactForm h2 {
+  font-weight: var(--fw-700);
   font-size: 40px;
   line-height: 52px;
   text-align: center;
   color: var(--color-darkblue);
-  margin: 4rem 1.5rem;
+  padding: 2rem;
 }
 
-.contact-form h2:hover {
+.contactForm h2:hover {
   transition-duration: 500ms;
   transform: translateY(2%);
   color: var(--color-darkgreen);
 }
 
-.contact-form form {
+.contactForm form {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   display: flex;
   flex-direction: column;
 }
 
-.contact-form form input {
-  font-weight: 400;
+.contactForm form input {
+  font-weight: var(--fw-400);
   font-size: 15px;
   line-height: 25px;
   color: #6b778c;
@@ -477,12 +497,12 @@ nav {
   padding: 0.9375rem 1rem;
 }
 
-.contact-form form .name-desktop {
+.contactForm form .name-desktop {
   display: none;
 }
 
-.contact-form form textarea {
-  font-weight: 400;
+.contactForm form textarea {
+  font-weight: var(--fw-400);
   font-size: 15px;
   line-height: 24px;
   color: #6b778c;
@@ -496,21 +516,21 @@ nav {
   resize: none;
 }
 
-.contact-form form textarea:focus {
+.contactForm form textarea:focus {
   border: 1px solid var(--color-darkgreen);
   background-color: var(--color-lightgreen);
 }
 
-.contact-form form input:focus {
+.contactForm form input:focus {
   border: 1px solid var(--color-darkgreen);
   background-color: var(--color-lightgreen);
 }
 
-.contact-form form button {
+.contactForm form button {
   background-color: var(--color-darkgreen);
   border-radius: 4px;
   border: hidden;
-  font-weight: 500;
+  font-weight: var(--fw-500);
   font-size: 17px;
   line-height: 1.5rem;
   letter-spacing: 0.03em;
@@ -540,9 +560,9 @@ nav {
   fill: var(--color-darkgreen);
 }
 
-.email-me {
+.emailMe {
   display: block;
-  font-weight: 400;
+  font-weight: var(--fw-400);
   font-size: 20px;
   line-height: 32px;
   height: 189px;
@@ -552,19 +572,19 @@ nav {
   margin-bottom: 9.1875rem;
 }
 
-.email-me:hover {
+.emailMe:hover {
   color: var(--color-darkgreen);
 }
 
 /* ---------------Hover Effects--------------- */
-.grid-item button:hover {
+.gridItem button:hover {
   box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
   transition-duration: 500ms;
   background-color: var(--color-darkblue);
   cursor: pointer;
 }
 
-.grid-item button:active {
+.gridItem button:active {
   background-color: #008552;
 }
 
@@ -579,26 +599,26 @@ nav {
   background-color: #008552;
 }
 
-.contact-form form button:hover {
+.contactForm form button:hover {
   box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
   transition-duration: 500ms;
   background-color: var(--color-darkblue);
   cursor: pointer;
 }
 
-.contact-form form button:active {
+.contactForm form button:active {
   background-color: #008552;
 }
 
-.description-container li:hover {
+.descriptionContainer li:hover {
   color: var(--color-darkgreen);
 }
 
-.cards-description h2:hover {
+.cardsDescription h2:hover {
   color: var(--color-darkgreen);
 }
 
-.cards-description li:hover {
+.cardsDescription li:hover {
   color: #3a4a42;
 }
 
@@ -607,8 +627,10 @@ nav {
   .bg-container {
     background-image: url(./assets/header-d.svg);
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
+    background-size: cover;
     padding-bottom: 20rem;
+    height: auto;
   }
 
   .header-mobile {
@@ -617,7 +639,7 @@ nav {
 
   .header-desktop {
     display: block;
-    font-weight: 600;
+    font-weight: var(--fw-600);
     font-size: 1rem;
     margin-top: 1rem;
     color: var(--color-darkblue);
@@ -650,6 +672,26 @@ nav {
   .header-desktop a:visited {
     color: var(--color-darkblue);
     text-decoration: none;
+    display: inline-block;
+    position: relative;
+  }
+
+  .header-desktop a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-neutral-border);
+    transform-origin: bottom right;
+    transition: transform 500ms ease-out;
+  }
+
+  .header-desktop a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
 
   .header-desktop a:hover {
@@ -664,12 +706,11 @@ nav {
 
   .content h1,
   .content h2 {
-    font-weight: 800;
+    font-weight: var(--fw-800);
     font-size: 48px;
     line-height: 60px;
     text-align: center;
     letter-spacing: 0.37px;
-    color: var(--color-darkblue);
   }
 
   .content h1 {
@@ -702,21 +743,21 @@ nav {
     padding-bottom: 5rem;
   }
 
-  .circle-button {
+  .circleBtn {
     display: block;
     margin: 0 auto;
     transition-duration: 250ms;
   }
 
-  .circle-button:hover path {
+  .circleBtn:hover path {
     fill: var(--color-darkgreen);
   }
 
-  .circle-button svg:hover {
+  .circleBtn svg:hover {
     transform: scale(1.2);
   }
 
-  .circle-button:hover rect {
+  .circleBtn:hover rect {
     stroke: var(--color-darkgreen);
   }
 
@@ -724,7 +765,7 @@ nav {
     display: none;
   }
 
-  .grid-container {
+  .gridContainer {
     display: grid;
     place-items: center;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -739,10 +780,10 @@ nav {
     text-align: center;
     margin: 2rem auto;
     padding: 10rem 12rem;
-    height: 80vh;
+    height: auto;
   }
 
-  .cards-flex-container {
+  .cardsContainer {
     display: grid;
     place-items: center;
     align-items: stretch;
@@ -751,7 +792,7 @@ nav {
     margin: 0 8rem;
   }
 
-  .contact-form {
+  .contactForm {
     background-image: url(./assets/contact-form1-d.svg), url(./assets/contact-form2-d.svg), url(./assets/contact-form3-d.svg);
     background-position: bottom left, 20% 100%, bottom right;
     background-repeat: no-repeat;
@@ -763,25 +804,30 @@ nav {
     padding-bottom: 5rem;
   }
 
-  .cards-description {
+  .cardsDescription {
     display: grid;
     place-items: center stretch;
   }
 
-  .contact-form h2 {
+  .langUl {
+    position: relative;
+    bottom: 2.5rem;
+  }
+
+  .contactForm h2 {
     width: 40%;
-    margin-right: 2rem;
-    margin-top: 3rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
     font-size: 32px;
     height: 300px;
     align-self: center;
   }
 
-  .contact-form form input.mobile {
+  .contactForm form input.mobile {
     display: none;
   }
 
-  .contact-form form {
+  .contactForm form {
     width: 60%;
     margin-top: 5rem;
     margin-right: 4rem;
@@ -789,20 +835,20 @@ nav {
     position: relative;
   }
 
-  .contact-form form .name-desktop {
+  .contactForm form .name-desktop {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
-  .contact-form form .name-desktop input.desktop1 {
+  .contactForm form .name-desktop input.desktop1 {
     margin-right: 0.5rem;
   }
 
-  .contact-form form .name-desktop input.desktop2 {
+  .contactForm form .name-desktop input.desktop2 {
     margin-left: 0.5rem;
   }
 
-  .contact-form form button {
+  .contactForm form button {
     position: absolute;
     bottom: 1.5rem;
     left: 1.5rem;
