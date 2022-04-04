@@ -170,14 +170,7 @@ nav {
   animation-iteration-count: infinite;
   animation-timing-function: ease-in;
   color: transparent;
-  background: linear-gradient(
-    60deg,
-    #20bf55,
-    #01baef,
-    goldenrod,
-    #0cbaba,
-    #380036
-  );
+  background: linear-gradient(60deg, #20bf55, #01baef, goldenrod, #0cbaba, #380036);
   -webkit-background-clip: text;
   background-size: 60% 10%;
 }
@@ -726,14 +719,7 @@ nav {
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
     color: transparent;
-    background: linear-gradient(
-      60deg,
-      #20bf55,
-      #01baef,
-      goldenrod,
-      #0cbaba,
-      #380036
-    );
+    background: linear-gradient(60deg, #20bf55, #01baef, goldenrod, #0cbaba, #380036);
     -webkit-background-clip: text;
     background-size: 60% 10%;
   }
@@ -807,8 +793,7 @@ nav {
   }
 
   .contactForm {
-    background-image: url(./assets/contact-form1-d.svg),
-      url(./assets/contact-form2-d.svg), url(./assets/contact-form3-d.svg);
+    background-image: url(./assets/contact-form1-d.svg), url(./assets/contact-form2-d.svg), url(./assets/contact-form3-d.svg);
     background-position: bottom left, 20% 100%, bottom right;
     background-repeat: no-repeat;
     background-size: 10%;
