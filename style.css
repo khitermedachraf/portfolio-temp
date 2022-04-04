@@ -177,7 +177,6 @@ nav {
 }
 
 @keyframes rainbow-text {
-
   0%,
   100% {
     background-position: 0 0;
@@ -372,7 +371,7 @@ nav {
   font-weight: var(--fw-600);
   font-size: 32px;
   line-height: 44px;
-  color: #172B4D;
+  color: var(--color-darkblue);
   text-align: left;
   margin: 0;
   padding: 0;
@@ -399,7 +398,6 @@ nav {
   font-weight: 400;
   font-size: 1rem;
   line-height: 24px;
-  /* margin: 12px 12px; */
   text-align: left;
   margin-bottom: 2rem;
 }
