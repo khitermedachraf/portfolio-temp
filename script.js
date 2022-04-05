@@ -20,9 +20,6 @@ openBtn.addEventListener('click', openModal);
 closeBtn.addEventListener('click', closeModal);
 modalContainer.addEventListener('click', closeModal);
 
-
-
-
 // Mobile Modal
 const seeProject = document.querySelectorAll('.seeProject');
 const gridItem = document.querySelectorAll('.gridItem');
@@ -30,7 +27,7 @@ const gridItem = document.querySelectorAll('.gridItem');
 // Create div mobileModal dynamically
 const mobileModal = [];
 
-for (let i = 0; i < gridItem.length; i++) {
+for (let i = 0; i < gridItem.length; i += 1) {
   mobileModal[i] = document.createElement('div');
   mobileModal[i].classList.add('mobileModal');
   gridItem[i].append(mobileModal[i]);
@@ -173,34 +170,49 @@ seeProject.forEach((element) => {
 const seeProjectDesktop = document.querySelectorAll('.seeProjectDesktop');
 const desktopModal = document.querySelector('.desktopModal');
 const works = document.querySelector('.works');
-const body = document.body;
 
 function openDesktopModal(e) {
   const i = e.target.dataset.index;
   desktopModal.style.display = 'block';
-  const offsetTop = works.offsetTop/16;
-  desktopModal.style.top = 'offsetTop';
-
 
   const div1 = document.createElement('div');
   div1.classList.add('desktopMCContainer');
+
+  const div4 = document.createElement('div');
+  div4.classList.add('div4');
+  div4.style.backgroundColor = 'lightgrey';
+  div4.style.opacity = '0.5';
+  div4.style.width = '100vw';
+  div4.style.height = '600vh';
+  div4.style.filter = 'blur(100px)';
+  div4.style.position = 'absolute';
+  div4.style.top = '0';
+  div4.style.zIndex = '2';
+  works.appendChild(div4);
+
   const img1 = document.createElement('img');
   img1.classList.add('closeDesktop');
   img1.setAttribute('src', './assets/close-mobileModal.svg');
+
   function closeMobileModal() {
     desktopModal.style.display = 'none';
     div1.remove();
     div4.remove();
   }
+
   img1.addEventListener('click', closeMobileModal);
+
   const img2 = document.createElement('img');
   img2.classList.add('projectImgDesktop');
   img2.setAttribute('src', projectObj.imageDesktop[i]);
+
   const div3 = document.createElement('div');
   div3.classList.add('desktopModalHeadline');
+
   const h2 = document.createElement('h2');
   h2.classList.add('projectNameDesktop');
   h2.innerHTML = projectObj.name[i];
+
   const ul = document.createElement('ul');
   const li0 = document.createElement('li');
   const li1 = document.createElement('li');
@@ -221,24 +233,32 @@ function openDesktopModal(e) {
   li4.appendChild(li4text);
   li5.appendChild(li5text);
   ul.append(li0, li1, li2, li3, li4, li5);
+
   const p = document.createElement('p');
   p.classList.add('projectDescriptionDesktop');
   p.innerText = projectObj.description[i];
+
   const div2 = document.createElement('div');
   div2.classList.add('buttonContainerDesktop');
+
   const a1 = document.createElement('a');
   a1.classList.add('liveBtnDesktop');
+
   const linka1 = document.createTextNode('See Live');
   a1.appendChild(linka1);
   a1.href = projectObj.liveLink[i];
+
   const imga1 = document.createElement('img');
   imga1.setAttribute('src', './assets/icon-live.png');
   a1.appendChild(imga1);
+
   const a2 = document.createElement('a');
   a2.classList.add('srcBtnDesktop');
+
   const linka2 = document.createTextNode('See Source');
   a2.appendChild(linka2);
   a2.href = projectObj.sourceLink[i];
+
   const imga2 = document.createElement('img');
   imga2.setAttribute('src', './assets/icon-source.png');
   a2.appendChild(imga2);
@@ -252,18 +272,6 @@ function openDesktopModal(e) {
   div2.appendChild(a2);
   div3.appendChild(div2);
   desktopModal.appendChild(div1);
-
-  const div4 = document.createElement('div');
-  div4.classList.add('div4');
-  div4.style.backgroundColor = 'lightgrey';
-  div4.style.opacity = '0.5';
-  div4.style.width = '100vw';
-  div4.style.height = '600vh';
-  div4.style.filter = 'blur(100px)';
-  div4.style.position = 'absolute';
-  div4.style.top = '0';
-  div4.style.zIndex = '2';
-  works.appendChild(div4);
 }
 
 seeProjectDesktop.forEach((element) => {
