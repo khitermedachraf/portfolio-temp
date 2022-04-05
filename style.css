@@ -27,6 +27,7 @@ html {
   --color-white: #fff;
   --color-neutral-border: #d0d9d4;
   --color-grey-text: #3a4a42;
+  --color-modal-background: #c1c7d0;
   --borderCheck: 1px solid crimson;
 }
 
@@ -235,9 +236,10 @@ nav {
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
   margin: 0 auto;
+  position: relative;
 }
 
-.works h2 {
+.myRecentWorks {
   font-weight: var(--fw-700);
   font-size: 40px;
   line-height: 52px;
@@ -249,7 +251,7 @@ nav {
   color: var(--color-darkblue);
 }
 
-.works img {
+.indicator {
   margin: 0 auto;
   padding-bottom: 3.125rem;
   max-width: 100%;
@@ -276,6 +278,8 @@ nav {
   padding-top: 15.75rem;
   margin-bottom: 1.5rem;
   transition-duration: 500ms;
+  position: relative;
+  z-index: 0;
 }
 
 .gridItem:hover {
@@ -328,6 +332,254 @@ nav {
   color: var(--color-white);
   padding: 0.75rem;
   margin: 1.5rem auto;
+}
+
+.seeProjectDesktop {
+  display: none;
+}
+
+/* ---------------Mobile Modal Section--------------- */
+.mobileModal {
+  display: none;
+  position: absolute;
+  height: max-content;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--color-modal-background);
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+
+.mobileMCContainer {
+  margin: 1rem;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.closeMobile {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  background-color: transparent;
+  padding-bottom: 0;
+}
+
+.projectImgMobile {
+  display: block;
+  padding-bottom: 0;
+  width: 100%;
+}
+
+.projectName {
+  font-weight: var(--fw-600);
+  font-size: 32px;
+  line-height: 44px;
+  color: var(--color-darkblue);
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.projectName:hover {
+  transition-duration: 500ms;
+  transform: translateY(2%);
+  color: var(--color-darkgreen);
+}
+
+.mobileMCContainer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.mobileMCContainer li {
+  background-color: #ebf0ee;
+  list-style-type: none;
+  border-radius: 4px;
+  margin: 0.5rem 8px;
+  padding: 0.5rem;
+}
+
+.projectDescription {
+  display: block;
+  color: #344563;
+  font-weight: var(--fw-400);
+  font-size: 1rem;
+  line-height: 24px;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.buttonContainerMobile {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  place-content: center;
+}
+
+.liveBtn,
+.srcBtn {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--color-darkgreen);
+  border-radius: 4px;
+  border: hidden;
+  font-weight: var(--fw-500);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.03em;
+  color: var(--color-white);
+  padding-top: 0.5rem;
+  margin: 0 auto;
+  height: 40px;
+  width: 120px;
+  text-decoration: none;
+}
+
+.liveBtn:hover,
+.srcBtn:hover {
+  background-color: var(--color-darkblue);
+}
+
+.liveBtn img,
+.srcBtn img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ---------------Desktop Modal Section--------------- */
+.desktopModal {
+  display: none;
+  position: absolute;
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+}
+
+.desktopMCContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  border-radius: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6rem;
+  padding: 2rem;
+  opacity: 1;
+  width: 60%;
+}
+
+.closeDesktop {
+  align-self: flex-end;
+  background-color: var(--color-modal-background);
+  padding-bottom: 0;
+  width: 3rem;
+}
+
+.projectImgDesktop {
+  display: block;
+  padding-bottom: 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.projectNameDesktop {
+  font-weight: var(--fw-700);
+  font-size: 32px;
+  line-height: 44px;
+  color: var(--color-darkblue);
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+}
+
+.projectNameDesktop:hover {
+  transition-duration: 500ms;
+  transform: translateY(2%);
+  color: var(--color-darkgreen);
+}
+
+.desktopModalHeadline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.desktopMCContainer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.desktopMCContainer li {
+  background-color: #ebf0ee;
+  list-style-type: none;
+  border-radius: 4px;
+  margin: 0.5rem 8px;
+  padding: 0.5rem;
+}
+
+.projectDescriptionDesktop {
+  display: block;
+  color: #344563;
+  font-weight: var(--fw-400);
+  font-size: 1rem;
+  line-height: 30px;
+  text-align: left;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.buttonContainerDesktop {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  place-content: center;
+  column-gap: 1rem;
+  width: fit-content;
+}
+
+.liveBtnDesktop,
+.srcBtnDesktop {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  background-color: var(--color-darkgreen);
+  border-radius: 4px;
+  border: hidden;
+  font-weight: var(--fw-500);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.03em;
+  color: var(--color-white);
+  padding: 0.75rem;
+  margin: 0 auto;
+  height: 50px;
+  width: 140px;
+  text-decoration: none;
+}
+
+.liveBtnDesktop img,
+.srcBtnDesktop img {
+  width: 20px;
+  height: 20px;
+}
+
+.liveBtnDesktop:hover,
+.srcBtnDesktop:hover {
+  background-color: var(--color-darkblue);
 }
 
 /* ---------------About Me Section--------------- */
@@ -761,7 +1013,7 @@ nav {
     stroke: var(--color-darkgreen);
   }
 
-  .works img {
+  .indicator {
     display: none;
   }
 
@@ -771,6 +1023,14 @@ nav {
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap: 1.5rem;
     margin: 0 8rem;
+  }
+
+  .seeProject {
+    display: none;
+  }
+
+  .seeProjectDesktop {
+    display: block;
   }
 
   .aboutMe {
@@ -880,7 +1140,7 @@ nav {
   color: var(--color-darkgreen);
 }
 
-.works h2:hover {
+.myRecentWorks:hover {
   color: var(--color-darkgreen);
 }
 
