@@ -61,10 +61,13 @@ function openMobileModal(e) {
   const li0 = document.createElement('li');
   const li1 = document.createElement('li');
   const li2 = document.createElement('li');
-  [li0, li1, li2].innerText = [projectObj.lang[0], projectObj.lang[1], projectObj.lang[2]];
-  ul.appendChild(li0);
-  ul.appendChild(li1);
-  ul.appendChild(li2);
+  const li0text = document.createTextNode(projectObj.lang[0]);
+  const li1text = document.createTextNode(projectObj.lang[1]);
+  const li2text = document.createTextNode(projectObj.lang[2]);
+  li0.appendChild(li0text);
+  li1.appendChild(li1text);
+  li2.appendChild(li2text);
+  ul.append(li0, li1, li2);
 
   const p = document.createElement('p');
   p.classList.add('projectDescription');
