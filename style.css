@@ -238,7 +238,7 @@ nav {
   margin: 0 auto;
 }
 
-.works h2 {
+.myRecentWorks {
   font-weight: var(--fw-700);
   font-size: 40px;
   line-height: 52px;
@@ -978,7 +978,7 @@ nav {
   color: var(--color-darkgreen);
 }
 
-.works h2:hover {
+.myRecentWorks:hover {
   color: var(--color-darkgreen);
 }
 
