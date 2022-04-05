@@ -20,9 +20,21 @@ openBtn.addEventListener('click', openModal);
 closeBtn.addEventListener('click', closeModal);
 modalContainer.addEventListener('click', closeModal);
 
+
+
+
 // Mobile Modal
 const seeProject = document.querySelectorAll('.seeProject');
-const mobileModal = document.querySelectorAll('.mobileModal');
+const gridItem = document.querySelectorAll('.gridItem');
+
+// Create div mobileModal dynamically
+const mobileModal = [];
+
+for (let i = 0; i < gridItem.length; i++) {
+  mobileModal[i] = document.createElement('div');
+  mobileModal[i].classList.add('mobileModal');
+  gridItem[i].append(mobileModal[i]);
+}
 
 const description0 = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea";
 
@@ -160,9 +172,16 @@ seeProject.forEach((element) => {
 // Desktop Modal
 const seeProjectDesktop = document.querySelectorAll('.seeProjectDesktop');
 const desktopModal = document.querySelector('.desktopModal');
+const works = document.querySelector('.works');
+const body = document.body;
+
 function openDesktopModal(e) {
   const i = e.target.dataset.index;
   desktopModal.style.display = 'block';
+  const offsetTop = works.offsetTop/16;
+  desktopModal.style.top = 'offsetTop';
+
+
   const div1 = document.createElement('div');
   div1.classList.add('desktopMCContainer');
   const img1 = document.createElement('img');
@@ -171,6 +190,7 @@ function openDesktopModal(e) {
   function closeMobileModal() {
     desktopModal.style.display = 'none';
     div1.remove();
+    div4.remove();
   }
   img1.addEventListener('click', closeMobileModal);
   const img2 = document.createElement('img');
@@ -232,6 +252,18 @@ function openDesktopModal(e) {
   div2.appendChild(a2);
   div3.appendChild(div2);
   desktopModal.appendChild(div1);
+
+  const div4 = document.createElement('div');
+  div4.classList.add('div4');
+  div4.style.backgroundColor = 'lightgrey';
+  div4.style.opacity = '0.5';
+  div4.style.width = '100vw';
+  div4.style.height = '600vh';
+  div4.style.filter = 'blur(100px)';
+  div4.style.position = 'absolute';
+  div4.style.top = '0';
+  div4.style.zIndex = '2';
+  works.appendChild(div4);
 }
 
 seeProjectDesktop.forEach((element) => {
