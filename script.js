@@ -266,9 +266,26 @@ seeProjectDesktop.forEach((element) => {
 
 // Form Validation - Mobile
 const formMobile = document.querySelector('.formMobile');
+const nameInputMobile = document.querySelector('.nameInputMobile');
 const emailInputMobile = document.querySelector('.emailInputMobile');
+const messageInputMobile = document.querySelector('.messageInputMobile');
 const submitBtnMobile = document.querySelector('.submitBtnMobile');
 let isFormValid = false;
+
+// Local Storage - Mobile & Desktop
+let formObj = {
+  fullNameMobile: '',
+  emailMobile: '',
+  messageMobile: '',
+  firstName: '',
+  lastName: '',
+  emailDesktop: '',
+  messageDesktop: '',
+};
+
+function storeInlS() {
+  localStorage.setItem('myData', JSON.stringify(formObj));
+}
 
 function validation() {
   const str = emailInputMobile.value.trim();
@@ -277,6 +294,7 @@ function validation() {
     submitBtnMobile.setCustomValidity('Sorry, this form has not been submitted. The content of the email field has to be in lower case. \n Please check your inputs and reload the page');
     submitBtnMobile.reportValidity();
     isFormValid = false;
+    storeInlS();
   } else {
     isFormValid = true;
   }
@@ -295,7 +313,10 @@ formMobile.addEventListener('submit', (e) => {
 
 // Form Validation - Desktop
 const formDesktop = document.querySelector('.formDesktop');
+const nameInputDesktop1 = document.querySelector('.nameInputDesktop1');
+const nameInputDesktop2 = document.querySelector('.nameInputDesktop2');
 const emailInputDesktop = document.querySelector('.emailInputDesktop');
+const messageInputDesktop = document.querySelector('.messageInputDesktop');
 const submitBtnDesktop = document.querySelector('.submitBtnDesktop');
 
 function validationDesktop() {
@@ -305,6 +326,7 @@ function validationDesktop() {
     submitBtnDesktop.setCustomValidity('Sorry, this form has not been submitted. The content of the email field has to be in lower case. \n Please check your inputs and reload the page.');
     submitBtnDesktop.reportValidity();
     isFormValid = false;
+    storeInlS();
   } else {
     isFormValid = true;
   }
@@ -320,3 +342,5 @@ formDesktop.addEventListener('submit', (e) => {
     formDesktop.submit();
   }
 });
+
+

@@ -1148,11 +1148,11 @@ nav {
     grid-template-columns: 1fr 1fr;
   }
 
-  .formDesktop .name-desktop input.desktop1 {
+  .formDesktop .name-desktop input.nameInputDesktop1 {
     margin-right: 0.5rem;
   }
 
-  .formDesktop .name-desktop input.desktop2 {
+  .formDesktop .name-desktop input.nameInputDesktop2 {
     margin-left: 0.5rem;
   }
 
