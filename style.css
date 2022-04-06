@@ -457,11 +457,15 @@ nav {
 /* ---------------Desktop Modal Section--------------- */
 .desktopModal {
   display: none;
-  position: absolute;
-  opacity: 1;
+  position: fixed;
+  background-color: var(--color-modal-background);
+  opacity: 0.95;
   height: 100%;
   width: 100%;
+  top: 0;
+  left: 0;
   z-index: 100;
+  overflow: auto;
 }
 
 .desktopMCContainer {
@@ -469,12 +473,11 @@ nav {
   flex-direction: column;
   background-color: var(--color-white);
   border-radius: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 6rem;
+  margin: 2rem auto;
   padding: 2rem;
   opacity: 1;
   width: 60%;
+  height: fit-content;
 }
 
 .closeDesktop {
