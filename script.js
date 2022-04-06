@@ -33,8 +33,7 @@ for (let i = 0; i < gridItem.length; i += 1) {
   gridItem[i].append(mobileModal[i]);
 }
 
-const description0 =
-  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea";
+const description0 = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea";
 
 const projectObj = {
   image: [
@@ -275,9 +274,7 @@ function validation() {
   const str = emailInputMobile.value.trim();
   const regEx = /[A-Z]/g;
   if (regEx.test(str)) {
-    submitBtnMobile.setCustomValidity(
-      'Sorry, this form has not been submitted. The content of the email field has to be in lower case. \n Please check your inputs and reload the page'
-    );
+    submitBtnMobile.setCustomValidity('Sorry, this form has not been submitted. The content of the email field has to be in lower case. \n Please check your inputs and reload the page');
     submitBtnMobile.reportValidity();
     isFormValid = false;
   } else {
@@ -290,9 +287,7 @@ formMobile.addEventListener('submit', (e) => {
   e.preventDefault();
   validation();
   if (isFormValid) {
-    submitBtnMobile.setCustomValidity(
-      'The form has been submitted. \n Thank you for contacting me.'
-    );
+    submitBtnMobile.setCustomValidity('The form has been submitted. \n Thank you for contacting me.');
     submitBtnMobile.reportValidity();
     formMobile.submit();
   }
@@ -303,13 +298,11 @@ const formDesktop = document.querySelector('.formDesktop');
 const emailInputDesktop = document.querySelector('.emailInputDesktop');
 const submitBtnDesktop = document.querySelector('.submitBtnDesktop');
 
-function validation() {
+function validationDesktop() {
   const str = emailInputDesktop.value.trim();
   const regEx = /[A-Z]/g;
   if (regEx.test(str)) {
-    submitBtnDesktop.setCustomValidity(
-      'Sorry, this form has not been submitted. The content of the email field has to be in lower case. \n Please check your inputs and reload the page.'
-    );
+    submitBtnDesktop.setCustomValidity('Sorry, this form has not been submitted. The content of the email field has to be in lower case. \n Please check your inputs and reload the page.');
     submitBtnDesktop.reportValidity();
     isFormValid = false;
   } else {
@@ -320,11 +313,9 @@ function validation() {
 
 formDesktop.addEventListener('submit', (e) => {
   e.preventDefault();
-  validation();
+  validationDesktop();
   if (isFormValid) {
-    submitBtnDesktop.setCustomValidity(
-      'The form has been submitted. \n Thank you for contacting me.'
-    );
+    submitBtnDesktop.setCustomValidity('The form has been submitted. \n Thank you for contacting me.');
     submitBtnDesktop.reportValidity();
     formDesktop.submit();
   }
