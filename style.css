@@ -279,11 +279,6 @@ nav {
   margin-bottom: 1.5rem;
   transition-duration: 500ms;
   position: relative;
-  z-index: 0;
-}
-
-.gridItem:hover {
-  transform: scale(1.1);
 }
 
 .descriptionContainer {
@@ -341,34 +336,41 @@ nav {
 /* ---------------Mobile Modal Section--------------- */
 .mobileModal {
   display: none;
-  position: absolute;
-  height: max-content;
-  width: 100%;
-  z-index: 100;
+  position: fixed;
   background-color: var(--color-modal-background);
+  opacity: 0.95;
+  height: 100%;
+  width: 100%;
   top: 0;
   left: 0;
-  margin: 0 auto;
-  border-radius: 1rem;
+  z-index: 1;
+  overflow: auto;
 }
 
 .mobileMCContainer {
-  margin: 1rem;
-  background-color: white;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
   border-radius: 1rem;
+  margin: 1rem auto;
   padding: 1rem;
+  opacity: 1;
+  width: 90%;
+  height: max-content;
+  position: relative;
 }
 
 .closeMobile {
   position: absolute;
-  top: 3rem;
-  right: 3rem;
+  top: 3%;
+  right: 5%;
   background-color: transparent;
-  padding-bottom: 0;
+  z-index: 1;
 }
 
 .projectImgMobile {
   display: block;
+  position: relative;
   padding-bottom: 0;
   width: 100%;
 }
@@ -439,7 +441,7 @@ nav {
   padding-top: 0.5rem;
   margin: 0 auto;
   height: 40px;
-  width: 120px;
+  width: 180px;
   text-decoration: none;
 }
 
@@ -457,11 +459,15 @@ nav {
 /* ---------------Desktop Modal Section--------------- */
 .desktopModal {
   display: none;
-  position: absolute;
-  opacity: 1;
+  position: fixed;
+  background-color: var(--color-modal-background);
+  opacity: 0.95;
   height: 100%;
   width: 100%;
+  top: 0;
+  left: 0;
   z-index: 100;
+  overflow: auto;
 }
 
 .desktopMCContainer {
@@ -469,12 +475,11 @@ nav {
   flex-direction: column;
   background-color: var(--color-white);
   border-radius: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 6rem;
+  margin: 2rem auto;
   padding: 2rem;
   opacity: 1;
   width: 60%;
+  height: max-content;
 }
 
 .closeDesktop {
@@ -728,14 +733,18 @@ nav {
   color: var(--color-darkgreen);
 }
 
-.contactForm form {
+.formMobile {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   display: flex;
   flex-direction: column;
 }
 
-.contactForm form input {
+.formDesktop {
+  display: none;
+}
+
+.formMobile input {
   font-weight: var(--fw-400);
   font-size: 15px;
   line-height: 25px;
@@ -749,11 +758,7 @@ nav {
   padding: 0.9375rem 1rem;
 }
 
-.contactForm form .name-desktop {
-  display: none;
-}
-
-.contactForm form textarea {
+.formMobile textarea {
   font-weight: var(--fw-400);
   font-size: 15px;
   line-height: 24px;
@@ -768,17 +773,17 @@ nav {
   resize: none;
 }
 
-.contactForm form textarea:focus {
+.formMobile textarea:focus {
   border: 1px solid var(--color-darkgreen);
   background-color: var(--color-lightgreen);
 }
 
-.contactForm form input:focus {
+.formMobile input:focus {
   border: 1px solid var(--color-darkgreen);
   background-color: var(--color-lightgreen);
 }
 
-.contactForm form button {
+.formMobile button {
   background-color: var(--color-darkgreen);
   border-radius: 4px;
   border: hidden;
@@ -1083,11 +1088,11 @@ nav {
     align-self: center;
   }
 
-  .contactForm form input.mobile {
-    display: none;
-  }
-
-  .contactForm form {
+  .formDesktop {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
     width: 60%;
     margin-top: 5rem;
     margin-right: 4rem;
@@ -1095,20 +1100,74 @@ nav {
     position: relative;
   }
 
-  .contactForm form .name-desktop {
+  .formMobile {
+    display: none;
+  }
+
+  .formDesktop input {
+    font-weight: var(--fw-400);
+    font-size: 15px;
+    line-height: 25px;
+    color: #6b778c;
+    height: 48px;
+    border: 1px solid var(--color-neutral-border);
+    border-radius: 4px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0.9375rem 1rem;
+  }
+
+  .formDesktop textarea {
+    font-weight: var(--fw-400);
+    font-size: 15px;
+    line-height: 24px;
+    color: #6b778c;
+    height: 116px;
+    border: 1px solid #60c095;
+    border-radius: 4px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem 1rem;
+    resize: none;
+  }
+
+  .formDesktop textarea:focus {
+    border: 1px solid var(--color-darkgreen);
+    background-color: var(--color-lightgreen);
+  }
+
+  .formDesktop input:focus {
+    border: 1px solid var(--color-darkgreen);
+    background-color: var(--color-lightgreen);
+  }
+
+  .formDesktop .name-desktop {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
-  .contactForm form .name-desktop input.desktop1 {
+  .formDesktop .name-desktop input.desktop1 {
     margin-right: 0.5rem;
   }
 
-  .contactForm form .name-desktop input.desktop2 {
+  .formDesktop .name-desktop input.desktop2 {
     margin-left: 0.5rem;
   }
 
-  .contactForm form button {
+  .formDesktop button {
+    background-color: var(--color-darkgreen);
+    border-radius: 4px;
+    border: hidden;
+    font-weight: var(--fw-500);
+    font-size: 17px;
+    line-height: 1.5rem;
+    letter-spacing: 0.03em;
+    color: var(--color-white);
+    padding: 0.75rem;
+    margin: 1.5rem auto;
+    width: fit-content;
     position: absolute;
     bottom: 1.5rem;
     left: 1.5rem;

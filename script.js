@@ -169,7 +169,6 @@ seeProject.forEach((element) => {
 // Desktop Modal
 const seeProjectDesktop = document.querySelectorAll('.seeProjectDesktop');
 const desktopModal = document.querySelector('.desktopModal');
-const works = document.querySelector('.works');
 
 function openDesktopModal(e) {
   const i = e.target.dataset.index;
@@ -178,18 +177,6 @@ function openDesktopModal(e) {
   const div1 = document.createElement('div');
   div1.classList.add('desktopMCContainer');
 
-  const div4 = document.createElement('div');
-  div4.classList.add('div4');
-  div4.style.backgroundColor = 'lightgrey';
-  div4.style.opacity = '0.5';
-  div4.style.width = '100vw';
-  div4.style.height = '600vh';
-  div4.style.filter = 'blur(100px)';
-  div4.style.position = 'absolute';
-  div4.style.top = '0';
-  div4.style.zIndex = '2';
-  works.appendChild(div4);
-
   const img1 = document.createElement('img');
   img1.classList.add('closeDesktop');
   img1.setAttribute('src', './assets/close-mobileModal.svg');
@@ -197,7 +184,6 @@ function openDesktopModal(e) {
   function closeMobileModal() {
     desktopModal.style.display = 'none';
     div1.remove();
-    div4.remove();
   }
 
   img1.addEventListener('click', closeMobileModal);
@@ -276,4 +262,61 @@ function openDesktopModal(e) {
 
 seeProjectDesktop.forEach((element) => {
   element.addEventListener('click', openDesktopModal);
+});
+
+// Form Validation - Mobile
+const formMobile = document.querySelector('.formMobile');
+const emailInputMobile = document.querySelector('.emailInputMobile');
+const submitBtnMobile = document.querySelector('.submitBtnMobile');
+let isFormValid = false;
+
+function validation() {
+  const str = emailInputMobile.value.trim();
+  const regEx = /[A-Z]/g;
+  if (regEx.test(str)) {
+    submitBtnMobile.setCustomValidity('Sorry, this form has not been submitted. The content of the email field has to be in lower case. \n Please check your inputs and reload the page');
+    submitBtnMobile.reportValidity();
+    isFormValid = false;
+  } else {
+    isFormValid = true;
+  }
+  return isFormValid;
+}
+
+formMobile.addEventListener('submit', (e) => {
+  e.preventDefault();
+  validation();
+  if (isFormValid) {
+    submitBtnMobile.setCustomValidity('The form has been submitted. \n Thank you for contacting me.');
+    submitBtnMobile.reportValidity();
+    formMobile.submit();
+  }
+});
+
+// Form Validation - Desktop
+const formDesktop = document.querySelector('.formDesktop');
+const emailInputDesktop = document.querySelector('.emailInputDesktop');
+const submitBtnDesktop = document.querySelector('.submitBtnDesktop');
+
+function validationDesktop() {
+  const str = emailInputDesktop.value.trim();
+  const regEx = /[A-Z]/g;
+  if (regEx.test(str)) {
+    submitBtnDesktop.setCustomValidity('Sorry, this form has not been submitted. The content of the email field has to be in lower case. \n Please check your inputs and reload the page.');
+    submitBtnDesktop.reportValidity();
+    isFormValid = false;
+  } else {
+    isFormValid = true;
+  }
+  return isFormValid;
+}
+
+formDesktop.addEventListener('submit', (e) => {
+  e.preventDefault();
+  validationDesktop();
+  if (isFormValid) {
+    submitBtnDesktop.setCustomValidity('The form has been submitted. \n Thank you for contacting me.');
+    submitBtnDesktop.reportValidity();
+    formDesktop.submit();
+  }
 });
