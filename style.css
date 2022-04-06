@@ -279,11 +279,6 @@ nav {
   margin-bottom: 1.5rem;
   transition-duration: 500ms;
   position: relative;
-  z-index: 0;
-}
-
-.gridItem:hover {
-  transform: scale(1.1);
 }
 
 .descriptionContainer {
@@ -341,34 +336,41 @@ nav {
 /* ---------------Mobile Modal Section--------------- */
 .mobileModal {
   display: none;
-  position: absolute;
-  height: max-content;
-  width: 100%;
-  z-index: 100;
+  position: fixed;
   background-color: var(--color-modal-background);
+  opacity: 0.95;
+  height: 100%;
+  width: 100%;
   top: 0;
   left: 0;
-  margin: 0 auto;
-  border-radius: 1rem;
+  z-index: 1;
+  overflow: auto;
 }
 
 .mobileMCContainer {
-  margin: 1rem;
-  background-color: white;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
   border-radius: 1rem;
+  margin: 1rem auto;
   padding: 1rem;
+  opacity: 1;
+  width: 90%;
+  height: max-content;
+  position: relative;
 }
 
 .closeMobile {
   position: absolute;
-  top: 3rem;
-  right: 3rem;
+  top: 3%;
+  right: 5%;
   background-color: transparent;
-  padding-bottom: 0;
+  z-index: 1;
 }
 
 .projectImgMobile {
   display: block;
+  position: relative;
   padding-bottom: 0;
   width: 100%;
 }
@@ -439,7 +441,7 @@ nav {
   padding-top: 0.5rem;
   margin: 0 auto;
   height: 40px;
-  width: 120px;
+  width: 180px;
   text-decoration: none;
 }
 
