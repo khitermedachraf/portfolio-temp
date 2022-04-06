@@ -264,18 +264,31 @@ seeProjectDesktop.forEach((element) => {
   element.addEventListener('click', openDesktopModal);
 });
 
-// Form Validation
+// Form Validation - Mobile
+const formMobile = document.querySelector('.formMobile');
+const emailInputMobile = document.querySelector('.emailInputMobile');
+const submitBtnMobile = document.querySelector('.submitBtnMobile');
+let isFormValid = false;
 
-const submitBtn = document.querySelector('.submitBtn');
-
-function validation(e) {
-  const str = e.target.value;
-  const regEx = /[a-z0-9]/g;
-  if (regEx.test(str) === false) {
-    submitBtn.setCustomValidity('Sorry, this form has not been submitted. \n The content of the email field has to be in lower case. \n Please check your inputs and resubmit again.');
+function validation() {
+  const str = emailInputMobile.value.trim();
+  const regEx = /[A-Z]/g;
+  if (regEx.test(str)) {
+    submitBtnMobile.setCustomValidity('Sorry, this form has not been submitted. The content of the email field has to be in lower case. \n Please check your inputs and reload the page');
+    submitBtnMobile.reportValidity();
+    isFormValid = false;
   } else {
-    return '';
+    isFormValid = true;
   }
+  return isFormValid;
 }
 
-submitBtn.addEventListener('click', validation);
+formMobile.addEventListener('submit', (e) => {
+  e.preventDefault();
+  validation();
+  if (isFormValid) {
+    submitBtnMobile.setCustomValidity('The form has been submitted. \n Thank you for contacting me.');
+    submitBtnMobile.reportValidity();
+    formMobile.submit();
+  }
+});

@@ -277,16 +277,22 @@
   <!-- Contact Form -->
   <section class="contactForm" id="contact">
     <h2>I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h2>
-    <form action="https://formspree.io/f/xwkyqzow" method="post">
-      <div class="name-desktop">
-        <input type="text" class="desktop1" name="name" placeholder="First name" maxlength="30" required>
-        <input type="text" class="desktop2" name="name" placeholder="Last name" maxlength="30" required>
-      </div>
+    <form class="formMobile" action="https://formspree.io/f/xwkyqzow" method="post">
       <input type="text" class="mobile" name="name" placeholder="Full name" maxlength="30" required>
-      <input class="emailInput" type="email" name="email" placeholder="Email address" required>
-      <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter text here" maxlength="500"
+      <input class="emailInputMobile" type="email" name="email" placeholder="Email address" required>
+      <textarea name="message" id="messageMobile" cols="30" rows="10" placeholder="Enter text here" maxlength="500"
         required></textarea>
-      <button class="submitBtn" type="submit" aria-label="Get in touch Button">Get in touch</button>
+      <button class="submitBtnMobile" type="submit" aria-label="Get in touch Button">Get in touch</button>
+    </form>
+    <form class="formDesktop" action="https://formspree.io/f/xwkyqzow" method="post">
+      <div class="name-desktop">
+        <input type="text" class="desktop1" name="firstName" placeholder="First name" maxlength="30" required>
+        <input type="text" class="desktop2" name="lastName" placeholder="Last name" maxlength="30" required>
+      </div>
+      <input class="emailInputDesktop" type="email" name="email" placeholder="Email address" required>
+      <textarea name="message" id="messageDesktop" cols="30" rows="10" placeholder="Enter text here" maxlength="500"
+        required></textarea>
+      <button class="submitBtnDesktop" type="submit" aria-label="Get in touch Button">Get in touch</button>
     </form>
   </section>
   <div class="breakline">
