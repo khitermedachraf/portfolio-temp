@@ -169,7 +169,6 @@ seeProject.forEach((element) => {
 // Desktop Modal
 const seeProjectDesktop = document.querySelectorAll('.seeProjectDesktop');
 const desktopModal = document.querySelector('.desktopModal');
-const works = document.querySelector('.works');
 
 function openDesktopModal(e) {
   const i = e.target.dataset.index;
@@ -178,18 +177,6 @@ function openDesktopModal(e) {
   const div1 = document.createElement('div');
   div1.classList.add('desktopMCContainer');
 
-  // const div4 = document.createElement('div');
-  // div4.classList.add('div4');
-  // div4.style.backgroundColor = 'lightgrey';
-  // div4.style.opacity = '0.5';
-  // div4.style.width = '100vw';
-  // div4.style.height = '600vh';
-  // div4.style.filter = 'blur(100px)';
-  // div4.style.position = 'absolute';
-  // div4.style.top = '0';
-  // div4.style.zIndex = '2';
-  // works.appendChild(div4);
-
   const img1 = document.createElement('img');
   img1.classList.add('closeDesktop');
   img1.setAttribute('src', './assets/close-mobileModal.svg');
@@ -197,7 +184,6 @@ function openDesktopModal(e) {
   function closeMobileModal() {
     desktopModal.style.display = 'none';
     div1.remove();
-    div4.remove();
   }
 
   img1.addEventListener('click', closeMobileModal);
@@ -281,14 +267,15 @@ seeProjectDesktop.forEach((element) => {
 // Form Validation
 
 const submitBtn = document.querySelector('.submitBtn');
-submitBtn.addEventListener('click', validation);
 
 function validation(e) {
-  let str = event.target.value;
-  let regEx = /[a-z0-9]/g;
-  if(regEx.test(str) === false) {
+  const str = e.target.value;
+  const regEx = /[a-z0-9]/g;
+  if (regEx.test(str) === false) {
     submitBtn.setCustomValidity('Sorry, this form has not been submitted. \n The content of the email field has to be in lower case. \n Please check your inputs and resubmit again.');
   } else {
-    return valid;
+    return '';
   }
 }
+
+submitBtn.addEventListener('click', validation);

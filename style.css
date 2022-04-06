@@ -477,7 +477,7 @@ nav {
   padding: 2rem;
   opacity: 1;
   width: 60%;
-  height: fit-content;
+  height: max-content;
 }
 
 .closeDesktop {
