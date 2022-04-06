@@ -349,6 +349,7 @@ function storeItem(e) {
   const keyNum = keys.indexOf(e.target.name);
   formObj[keys[keyNum]] = e.target.value;
 }
+
 nameInputMobile.addEventListener('input', storeItem);
 emailInputMobile.addEventListener('input', storeItem);
 messageInputMobile.addEventListener('input', storeItem);
@@ -356,6 +357,7 @@ nameInputDesktop1.addEventListener('input', storeItem);
 nameInputDesktop2.addEventListener('input', storeItem);
 emailInputDesktop.addEventListener('input', storeItem);
 messageInputDesktop.addEventListener('input', storeItem);
+
 function placeItems() {
   nameInputMobile.value = formObj.fullNameMobile;
   emailInputMobile.value = formObj.emailMobile;
@@ -365,6 +367,7 @@ function placeItems() {
   emailInputDesktop.value = formObj.emailDesktop;
   messageInputDesktop.value = formObj.messageDesktop;
 }
+
 window.onload = function retrieve() {
   if (localStorage.getItem('myData')) {
     formObj = JSON.parse(localStorage.getItem('myData'));
