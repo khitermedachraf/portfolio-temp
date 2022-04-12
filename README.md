@@ -1,38 +1,59 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project: Portfolio
+# Mavericks Balitaan Portfolio
+## *Microverse Module 1 Project*
 
-> This is my working portfolio. Inside you will find my basic background information, contact information, and a project showcase.
+> This is my working portfolio. Inside you will find my background information, contacts, and project showcase.
 
-## Built With
+## Built With 🛠️
 
-- HTML & CSS
-- Linters
-- VS Code
-- Figma (Template 3)
+- [x] HTML, CSS and JavaScript
+- [x] Linters: Lighthouse, Webhint, Stylelint and ESlint
+- [x] VS Code
+- [x] Figma [Template 3](https://www.figma.com/file/l7SqJ3ZfkAKih9sFxvWSR4/Microverse-Student-Project-1?node-id=1%3A468)
 
-## Live Demo
+## Live Demo 🔗
 
 Click [here](https://mavericks-db.github.io/portfolio/):point_left:
 
 ## Getting Started
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps.
 
-## Prerequisites
-Please install a code editor like Visual Studio Code.
-Aside from Git, kindly install node.js and npm for package installation.
+### Prerequisites
 
-## Setup
-From the GitHub repository, copy the link.
+Install a code editor like Visual Studio Code. Install Git and Node.js.
 
-## Install
-In the Terminal, clone the repository on your local machine.
+You can check if Git is installed by running the following command in the terminal.
+```
+$ git --version
+```
+
+Likewise for Node.js and npm for package installation.
+```
+$ node --version && npm --version
+```
+
+### Setup
+Clone the repository using the GitHub link provided below.
+
+### Install
+In the terminal, go to your file directory and run this command.
+
+```
+$ git clone git@github.com:mavericks-db/capstone01.git
+```
+
+### Run tests
+To check for linters, use the files provided by Microverse. A GitHub action is also set to run during pull request.
+```
+$ npm install
+```
 
 ## Usage
-Kindly modify the file as needed.
+Kindly modify the files as needed. This website demonstrates both desktop and mobile versions.
 
 ## Deployment
-This app is deployed in the GitHub Pages for easy viewing.
+This app is deployed in the GitHub Pages for easy viewing upon merged on the main branch.
 Please find the link in the Live Demo section.
 
 ## Author
