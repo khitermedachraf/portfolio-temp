@@ -12,6 +12,9 @@
 - [x] VS Code
 - [x] Figma [Template 3](https://www.figma.com/file/l7SqJ3ZfkAKih9sFxvWSR4/Microverse-Student-Project-1?node-id=1%3A468)
 
+## Screenshots 📸
+Find the full page screenshots in the repository
+
 ## Live Demo 🔗
 
 Click [here](https://mavericks-db.github.io/portfolio/):point_left:
