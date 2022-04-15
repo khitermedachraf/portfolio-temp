@@ -1216,6 +1216,7 @@ footer {
     background-size: cover;
     padding-bottom: 20rem;
     height: auto;
+    margin: auto;
   }
 
   .header-mobile {
