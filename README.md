@@ -12,12 +12,11 @@
 - [x] VS Code
 - [x] Figma [Template 3](https://www.figma.com/file/l7SqJ3ZfkAKih9sFxvWSR4/Microverse-Student-Project-1?node-id=1%3A468)
 
-## Screenshots 📸
-Desktop Version
-![desktop_screenshot](https://user-images.githubusercontent.com/98527559/162934283-51f773fb-c31d-41e0-ba8e-19fd42b618b5.png)
+## Website Mockup 📱 💻 
+![all-devices-black](https://user-images.githubusercontent.com/98527559/163574091-fa7869bc-8077-4cca-8394-46c0a08a6346.png)
 
-Mobile Version
-![mobile_screenshot](https://user-images.githubusercontent.com/98527559/162934311-412b4ffd-8e0e-468c-a4b0-0bdef4cbdb23.png)
+## Screenshots 📸
+Screenshots for mobile and desktop versions can be found in the repository.
 
 ## Live Demo 🔗
 
