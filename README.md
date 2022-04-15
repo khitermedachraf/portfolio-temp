@@ -16,11 +16,11 @@
 ![all-devices-black](https://user-images.githubusercontent.com/98527559/163574091-fa7869bc-8077-4cca-8394-46c0a08a6346.png)
 
 ## Screenshots 📸
-Screenshots for mobile and desktop versions can be found in the repository.
+Mobile and desktop version screenshots can be found in the repository.
 
 ## Live Demo 🔗
 
-Click [here](https://mavericks-db.github.io/portfolio/):point_left:
+Click [here](https://mavericks-db.github.io/portfolio/)👈
 
 ## Getting Started
 To get a local copy up and running follow these simple steps.
