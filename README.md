@@ -46,7 +46,7 @@ Clone the repository using the GitHub link provided below.
 In the terminal, go to your file directory and run this command.
 
 ```
-$ git clone git@github.com:mavericks-db/capstone01.git
+$ git clone git@github.com:mavericks-db/portfolio.git
 ```
 
 ### Run tests
