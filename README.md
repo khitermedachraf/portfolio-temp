@@ -73,15 +73,15 @@ Please find the link in the Live Demo section.
 - LinkedIn: [![LinkedIn Badge](https://img.shields.io/badge/-mavericks--db-white?logo=LinkedIn&logoColor=0A66C2&style=plastic)](https://www.linkedin.com/in/mavericks-db/)
 - Gmail: [![Gmail Badge](https://img.shields.io/badge/-@balitaanmavericks-white?logo=Gmail&logoColor=EA4335&style=plastic)](mailto:balitaanmavericks@gmail.com)
 
-👤 **Baroka Irotori**
+👤 **Baroka Irotori** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
 - GitHub: [![GitHub Badge](https://img.shields.io/badge/-Baroka--wp-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/Baroka-wp)
 
-👤 **Yusuf Nviiri**
+👤 **Yusuf Nviiri** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
 - GitHub: [![GitHub Badge](https://img.shields.io/badge/-yusufnviiri-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/yusufnviiri)
 
-👤 **Shamuobe Buingo Joseph**
+👤 **Shamuobe Buingo Joseph** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
 - GitHub: [![GitHub Badge](https://img.shields.io/badge/-joseph07--drack-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/joseph07-drack)
 
