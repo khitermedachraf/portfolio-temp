@@ -8,7 +8,7 @@
 ## Built With 🛠️
 
 - [x] HTML, CSS and JavaScript
-- [x] Linters: Lighthouse, Webhint, Stylelint and ESlint
+- [x] Linters: Lighthouse, Webhint, Stylelint and ESLint
 - [x] VS Code
 - [x] Figma [Template 3](https://www.figma.com/file/l7SqJ3ZfkAKih9sFxvWSR4/Microverse-Student-Project-1?node-id=1%3A468)
 
@@ -96,7 +96,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Microverse
+- [Microverse](https://www.microverse.org/)
 - Code Reviewers
 - Coding Partners
 
