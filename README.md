@@ -20,7 +20,7 @@ Mobile and desktop version screenshots can be found in the repository.
 
 ## Live Demo 🔗
 
-Click [here](https://mavericks-db.github.io/portfolio/)👈
+Check out the live demo [here](https://mavericks-db.github.io/portfolio/)👈
 
 ## Getting Started
 To get a local copy up and running follow these simple steps.
