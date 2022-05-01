@@ -7,9 +7,9 @@
 
 ## Built With 🛠️
 
-- [x] HTML, CSS and JavaScript
+- [x] Language: HTML, Sass and JavaScript
 - [x] Linters: Lighthouse, Webhint, Stylelint and ESLint
-- [x] VS Code
+- [x] Code Editor: VS Code
 - [x] Figma [Template 3](https://www.figma.com/file/l7SqJ3ZfkAKih9sFxvWSR4/Microverse-Student-Project-1?node-id=1%3A468)
 
 ## Website Mockup 📱 💻 🖥️
@@ -63,7 +63,7 @@ Kindly modify the files as needed. This website demonstrates both desktop and mo
 This app is deployed in the GitHub Pages for easy viewing upon merged on the main branch.
 Please find the link in the Live Demo section.
 
-## Author
+## Authors
 
 👤 **Mavericks Balitaan** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 

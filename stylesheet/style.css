@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   margin: 0;
   padding: 0;
@@ -36,7 +35,7 @@ body {
 }
 
 .bg-container {
-  background-image: url(./assets/header-m.svg);
+  background-image: url(../assets/header-m.svg);
   background-repeat: no-repeat;
   background-position: 0 2.8rem;
   background-size: cover;
@@ -69,22 +68,19 @@ nav {
   padding: 0.625rem 0.75rem;
   text-decoration: none;
   color: var(--color-darkblue);
-  animation-name: logo-rotate;
+  animation-name: logo-onload;
   animation-duration: 1400ms;
   animation-timing-function: ease-in-out;
-  animation-iteration-count: 1;
 }
 
-@keyframes logo-rotate {
+@keyframes logo-onload {
   from {
-    transform: rotate(0) scale(0.9);
+    transform: translateY(-200%);
   }
-
   to {
-    transform: rotate(360deg) scale(0.9);
+    transform: translateY(0);
   }
 }
-
 .logo-holder:hover {
   cursor: pointer;
   color: var(--color-darkgreen);
@@ -177,18 +173,15 @@ nav {
 }
 
 @keyframes rainbow-text {
-  0%,
-  100% {
+  0%, 100% {
     background-position: 0 0;
     transform: scale(1);
   }
-
   50% {
     background-position: 100% 0;
     transform: scale(1.05);
   }
 }
-
 .content h2 {
   color: var(--color-darkgreen);
 }
@@ -589,7 +582,7 @@ nav {
 
 /* ---------------About Me Section--------------- */
 .aboutMe {
-  background-image: url(./assets/aboutme-m.svg), url(./assets/aboutme2-m.svg);
+  background-image: url(../assets/aboutme-m.svg), url(../assets/aboutme2-m.svg);
   background-position: right top, left bottom;
   background-repeat: no-repeat, no-repeat;
   text-align: center;
@@ -713,7 +706,7 @@ nav {
 
 /* ---------------Contact Form Section--------------- */
 .contactForm {
-  background-image: url(./assets/contact-form-m.svg);
+  background-image: url(../assets/contact-form-m.svg);
   background-position: bottom right;
   background-repeat: no-repeat;
 }
@@ -734,7 +727,7 @@ nav {
 }
 
 .formMobile {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   display: flex;
   flex-direction: column;
@@ -882,7 +875,7 @@ nav {
 /* ---------------Media Query Section For Medium Devices--------------- */
 @media (min-width: 769px) {
   .bg-container {
-    background-image: url(./assets/header-d.svg);
+    background-image: url(../assets/header-d.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -909,12 +902,10 @@ nav {
     from {
       transform: translateY(-200%);
     }
-
     to {
       transform: translateY(0);
     }
   }
-
   .header-desktop ul {
     display: flex;
     justify-content: center;
@@ -926,7 +917,7 @@ nav {
   }
 
   .header-desktop a,
-  .header-desktop a:visited {
+.header-desktop a:visited {
     color: var(--color-darkblue);
     text-decoration: none;
     display: inline-block;
@@ -934,7 +925,7 @@ nav {
   }
 
   .header-desktop a::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     transform: scaleX(0);
@@ -962,7 +953,7 @@ nav {
   }
 
   .content h1,
-  .content h2 {
+.content h2 {
     font-weight: var(--fw-800);
     font-size: 48px;
     line-height: 60px;
@@ -1039,7 +1030,7 @@ nav {
   }
 
   .aboutMe {
-    background-image: url(./assets/aboutme-d.svg), url(./assets/aboutme2-d.svg);
+    background-image: url(../assets/aboutme-d.svg), url(../assets/aboutme2-d.svg);
     background-position: right top, left bottom;
     background-repeat: no-repeat, no-repeat;
     text-align: center;
@@ -1058,7 +1049,7 @@ nav {
   }
 
   .contactForm {
-    background-image: url(./assets/contact-form1-d.svg), url(./assets/contact-form2-d.svg), url(./assets/contact-form3-d.svg);
+    background-image: url(../assets/contact-form1-d.svg), url(../assets/contact-form2-d.svg), url(../assets/contact-form3-d.svg);
     background-position: bottom left, 20% 100%, bottom right;
     background-repeat: no-repeat;
     background-size: 10%;
@@ -1089,7 +1080,7 @@ nav {
   }
 
   .formDesktop {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-style: normal;
     display: flex;
     flex-direction: column;
@@ -1190,7 +1181,6 @@ nav {
     display: none;
   }
 }
-
 .content h1:hover {
   animation-play-state: paused;
 }
@@ -1210,7 +1200,7 @@ footer {
 /* ---------------Media Query Section For Desktop--------------- */
 @media (min-width: 1200px) {
   .bg-container {
-    background-image: url(./assets/header-d.svg);
+    background-image: url(../assets/header-d.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1238,12 +1228,10 @@ footer {
     from {
       transform: translateY(-200%);
     }
-
     to {
       transform: translateY(0);
     }
   }
-
   .header-desktop ul {
     display: flex;
     justify-content: center;
@@ -1255,7 +1243,7 @@ footer {
   }
 
   .header-desktop a,
-  .header-desktop a:visited {
+.header-desktop a:visited {
     color: var(--color-darkblue);
     text-decoration: none;
     display: inline-block;
@@ -1263,7 +1251,7 @@ footer {
   }
 
   .header-desktop a::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     transform: scaleX(0);
@@ -1291,7 +1279,7 @@ footer {
   }
 
   .content h1,
-  .content h2 {
+.content h2 {
     font-weight: var(--fw-800);
     font-size: 48px;
     line-height: 60px;
@@ -1368,7 +1356,7 @@ footer {
   }
 
   .aboutMe {
-    background-image: url(./assets/aboutme-d.svg), url(./assets/aboutme2-d.svg);
+    background-image: url(../assets/aboutme-d.svg), url(../assets/aboutme2-d.svg);
     background-position: right top, left bottom;
     background-repeat: no-repeat, no-repeat;
     text-align: center;
@@ -1387,7 +1375,7 @@ footer {
   }
 
   .contactForm {
-    background-image: url(./assets/contact-form1-d.svg), url(./assets/contact-form2-d.svg), url(./assets/contact-form3-d.svg);
+    background-image: url(../assets/contact-form1-d.svg), url(../assets/contact-form2-d.svg), url(../assets/contact-form3-d.svg);
     background-position: bottom left, 20% 100%, bottom right;
     background-repeat: no-repeat;
     background-size: 10%;
@@ -1418,7 +1406,7 @@ footer {
   }
 
   .formDesktop {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-style: normal;
     display: flex;
     flex-direction: column;
@@ -1519,3 +1507,5 @@ footer {
     display: none;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
