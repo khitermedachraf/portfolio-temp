@@ -1,13 +1,14 @@
 const gridContainer = document.querySelector('.gridContainer');
 
 const cardObj = {
-  h3: ['Multi-Post Stories Gain+Glory', 'Multi-Post Stories Gain+Glory', 'Multi-Post Stories Gain+Glory', 'Multi-Post Stories Gain+Glory', 'Multi-Post Stories Gain+Glory', 'Multi-Post Stories Gain+Glory'],
-  li1: ['Ruby on rails', 'Ruby on rails', 'Ruby on rails', 'Ruby on rails', 'Ruby on rails', 'Ruby on rails'],
-  li2: ['CSS', 'CSS', 'CSS', 'CSS', 'CSS', 'CSS'],
+  h3: ['Asia Web Conference 2022', 'Multi-Post Stories Gain+Glory', 'Multi-Post Stories Gain+Glory', 'Multi-Post Stories Gain+Glory', 'Multi-Post Stories Gain+Glory', 'Multi-Post Stories Gain+Glory'],
+  img: ['./assets/img/homepageDesktop_screenshot.png', './assets/desktop-details01.png', './assets/desktop-details02.png', './assets/desktop-details03.png', './assets/desktop-details04.png', './assets/desktop-details05.png'],
+  li1: ['HTML', 'Ruby on rails', 'Ruby on rails', 'Ruby on rails', 'Ruby on rails', 'Ruby on rails'],
+  li2: ['Sass', 'CSS', 'CSS', 'CSS', 'CSS', 'CSS'],
   li3: ['JavaScript', 'JavaScript', 'JavaScript', 'JavaScript', 'JavaScript', 'JavaScript'],
-  li4: ['HTML', 'HTML', 'HTML', 'HTML', 'HTML', 'HTML'],
+  li4: ['Linters', 'HTML', 'HTML', 'HTML', 'HTML', 'HTML'],
 };
-// Create card items dynamically
+// Create Card Items Dynamically
 const gridItem = [];
 const descriptionContainer = [];
 const h3 = [];
@@ -22,6 +23,9 @@ const button2 = [];
 for (let i = 0; i < 6; i += 1) {
   gridItem[i] = document.createElement('div');
   gridItem[i].classList.add('gridItem');
+  gridItem[i].style.backgroundImage = `url(${cardObj.img[i]})`;
+  gridItem[i].style.backgroundSize = 'cover';
+
   descriptionContainer[i] = document.createElement('div');
   descriptionContainer[i].classList.add('descriptionContainer');
 
@@ -102,11 +106,12 @@ for (let i = 0; i < gridItem.length; i += 1) {
   gridItem[i].append(mobileModal[i]);
 }
 
-const description0 = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea";
+const description0 = 'Microverse First Capstone Project: This is an educational project to make a website for a web conference event with home page and about page.';
+const description5 = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea";
 
 const projectObj = {
   image: [
-    './assets/projectImage00.png',
+    './assets/img/homepageDesktop_screenshot.png',
     './assets/projectImage01.png',
     './assets/projectImage02.png',
     './assets/projectImage03.png',
@@ -114,7 +119,7 @@ const projectObj = {
     './assets/projectImage05.png',
   ],
   imageDesktop: [
-    './assets/desktop-details00.png',
+    './assets/img/homepageDesktop_screenshot.png',
     './assets/desktop-details01.png',
     './assets/desktop-details02.png',
     './assets/desktop-details03.png',
@@ -122,31 +127,39 @@ const projectObj = {
     './assets/desktop-details05.png',
   ],
   name: [
-    'Keeping track of hundreds of components',
+    'Asia Web Conference 2022',
     'Keeping track of hundreds of components',
     'Keeping track of hundreds of components',
     'Keeping track of hundreds of components',
     'Keeping track of hundreds of components',
     'Keeping track of hundreds of components',
   ],
-  lang: ['Ruby on rails', 'css', 'JavScript'],
+  lang: [
+    ['HTML', 'Sass', 'JavaScript'],
+    ['Ruby on rails', 'css', 'JavScript'],
+    ['Ruby on rails', 'css', 'JavScript'],
+    ['Ruby on rails', 'css', 'JavScript'],
+    ['Ruby on rails', 'css', 'JavScript'],
+    ['Ruby on rails', 'css', 'JavScript'],
+  ],
   langDesktop: [
-    'Codekit',
-    'GitHub',
-    'JavaScript',
-    'Bootstrap',
-    'Terminal',
-    'Codepen',
+    ['GitHub', 'VS Code', 'HTML', 'Sass', 'JavaScript', 'Linters'],
+    ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
+    ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
+    ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
+    ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
+    ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
   ],
   description: [
     description0,
-    description0,
-    description0,
-    description0,
-    description0,
-    description0,
+    description5,
+    description5,
+    description5,
+    description5,
+    description5,
   ],
   liveLink: [
+    'https://mavericks-db.github.io/capstone01/',
     'https://github.com/mavericks-db',
     'https://github.com/mavericks-db',
     'https://github.com/mavericks-db',
@@ -154,6 +167,7 @@ const projectObj = {
     'https://github.com/mavericks-db',
   ],
   sourceLink: [
+    'https://github.com/mavericks-db/capstone01',
     'https://github.com/mavericks-db',
     'https://github.com/mavericks-db',
     'https://github.com/mavericks-db',
@@ -188,9 +202,9 @@ function openMobileModal(e) {
   const li0 = document.createElement('li');
   const li1 = document.createElement('li');
   const li2 = document.createElement('li');
-  const li0text = document.createTextNode(projectObj.lang[0]);
-  const li1text = document.createTextNode(projectObj.lang[1]);
-  const li2text = document.createTextNode(projectObj.lang[2]);
+  const li0text = document.createTextNode(projectObj.lang[i][0]);
+  const li1text = document.createTextNode(projectObj.lang[i][1]);
+  const li2text = document.createTextNode(projectObj.lang[i][2]);
   li0.appendChild(li0text);
   li1.appendChild(li1text);
   li2.appendChild(li2text);
@@ -275,12 +289,12 @@ function openDesktopModal(e) {
   const li3 = document.createElement('li');
   const li4 = document.createElement('li');
   const li5 = document.createElement('li');
-  const li0text = document.createTextNode(projectObj.langDesktop[0]);
-  const li1text = document.createTextNode(projectObj.langDesktop[1]);
-  const li2text = document.createTextNode(projectObj.langDesktop[2]);
-  const li3text = document.createTextNode(projectObj.langDesktop[3]);
-  const li4text = document.createTextNode(projectObj.langDesktop[4]);
-  const li5text = document.createTextNode(projectObj.langDesktop[5]);
+  const li0text = document.createTextNode(projectObj.langDesktop[i][0]);
+  const li1text = document.createTextNode(projectObj.langDesktop[i][1]);
+  const li2text = document.createTextNode(projectObj.langDesktop[i][2]);
+  const li3text = document.createTextNode(projectObj.langDesktop[i][3]);
+  const li4text = document.createTextNode(projectObj.langDesktop[i][4]);
+  const li5text = document.createTextNode(projectObj.langDesktop[i][5]);
   li0.appendChild(li0text);
   li1.appendChild(li1text);
   li2.appendChild(li2text);
