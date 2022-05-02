@@ -1,3 +1,73 @@
+const gridContainer = document.querySelector('.gridContainer');
+
+const cardObj = {
+  h3: ['Multi-Post Stories Gain+Glory', 'Multi-Post Stories Gain+Glory', 'Multi-Post Stories Gain+Glory', 'Multi-Post Stories Gain+Glory', 'Multi-Post Stories Gain+Glory', 'Multi-Post Stories Gain+Glory'],
+  li1: ['Ruby on rails', 'Ruby on rails', 'Ruby on rails', 'Ruby on rails', 'Ruby on rails', 'Ruby on rails'],
+  li2: ['CSS', 'CSS', 'CSS', 'CSS', 'CSS', 'CSS'],
+  li3: ['JavaScript', 'JavaScript', 'JavaScript', 'JavaScript', 'JavaScript', 'JavaScript'],
+  li4: ['HTML', 'HTML', 'HTML', 'HTML', 'HTML', 'HTML'],
+};
+// Create card items dynamically
+const gridItem = [];
+const descriptionContainer = [];
+const h3 = [];
+const ul = [];
+const li1 = [];
+const li2 = [];
+const li3 = [];
+const li4 = [];
+const button1 = [];
+const button2 = [];
+
+for (let i = 0; i < 6; i += 1) {
+  gridItem[i] = document.createElement('div');
+  gridItem[i].classList.add('gridItem');
+  descriptionContainer[i] = document.createElement('div');
+  descriptionContainer[i].classList.add('descriptionContainer');
+
+  h3[i] = document.createElement('h3');
+  const h3text = document.createTextNode(cardObj.h3[i]);
+  h3[i].append(h3text);
+
+  ul[i] = document.createElement('ul');
+  li1[i] = document.createElement('li');
+  const li1text = document.createTextNode(cardObj.li1[i]);
+  li1[i].append(li1text);
+
+  li2[i] = document.createElement('li');
+  const li2text = document.createTextNode(cardObj.li2[i]);
+  li2[i].append(li2text);
+
+  li3[i] = document.createElement('li');
+  const li3text = document.createTextNode(cardObj.li3[i]);
+  li3[i].append(li3text);
+
+  li4[i] = document.createElement('li');
+  const li4text = document.createTextNode(cardObj.li4[i]);
+  li4[i].append(li4text);
+
+  button1[i] = document.createElement('button');
+  const button1text = document.createTextNode('See Project');
+  button1[i].append(button1text);
+  button1[i].setAttribute('type', 'button');
+  button1[i].classList.add('seeProject');
+  button1[i].setAttribute('aria-label', 'See Project Button');
+  button1[i].setAttribute('data-index', i);
+
+  button2[i] = document.createElement('button');
+  const button2text = document.createTextNode('See Project');
+  button2[i].append(button2text);
+  button2[i].setAttribute('type', 'button');
+  button2[i].classList.add('seeProjectDesktop');
+  button2[i].setAttribute('aria-label', 'See Project Button');
+  button2[i].setAttribute('data-index', i);
+
+  ul[i].append(li1[i], li2[i], li3[i], li4[i]);
+  descriptionContainer[i].append(h3[i], ul[i], button1[i], button2[i]);
+  gridItem[i].append(descriptionContainer[i]);
+  gridContainer.append(gridItem[i]);
+}
+
 const openBtn = document.querySelector('.openBtn');
 const closeBtn = document.querySelector('.closeBtn');
 const modalContainer = document.querySelector('.modalContainer');
@@ -22,7 +92,6 @@ modalContainer.addEventListener('click', closeModal);
 
 // Mobile Modal
 const seeProject = document.querySelectorAll('.seeProject');
-const gridItem = document.querySelectorAll('.gridItem');
 
 // Create div mobileModal dynamically
 const mobileModal = [];
